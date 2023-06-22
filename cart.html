@@ -1,0 +1,727 @@
+
+<!-- - var classBody = 'page-info'; // класс для body--><!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+    <meta name="description">
+    <meta name="keywords" content="">
+    <title>Boolmarket главная</title>
+    <link rel="stylesheet" href="assets/css/main.css?v=undefined">
+    <body></body>
+    <header class="header">
+      <div class="header__row1">
+        <div class="container"><a class="header__line-phone" href="tel:+74952555549">+7 495 255 55 49 (c 08:00 до 17:00)</a>
+          <ul>
+            <li><a href="#">Документы</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="header__row2">
+        <div class="container"><a class="header__row2-logo" href=""><img src="assets/img/logo.svg" alt="#"></a>
+          <button class="btn"><span>1</span> Каталог</button>
+          <form class="header__row2-search">
+            <div class="placeholder-container">
+              <input type="text" name="#" placeholder=" " required>
+              <div class="caption">Поиск...</div>
+              <button class="btn"></button>
+            </div>
+          </form>
+          <div class="header__row2-right"><a class="header__row2-right-price">
+              <div class="header__row2-right-price-caption">Опт 4<span>1</span></div>
+              <p>Моя цена</p></a><a class="header__row2-right-favourites">
+              <div class="header__row2-right-favourites-icon"><span>1</span></div>
+              <p>Избранное</p></a><a class="header__row2-right-user">
+              <div class="header__row2-right-user-icon"></div>
+              <p>Профиль</p></a>
+            <div class="header__row2-right-cart">
+              <div class="header__row2-right-cart-caption">0 P</div>
+              <!-- попап списка корзин-->
+              <div class="popup-cart popup-cart-list">
+                <form>
+                  <div class="popup-cart-list__item">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="checkbox-one" type="checkbox" name="">
+                      <label class="checkbox__label" style="--cart-color: #3E4347;" for="checkbox-one">Основная</label>
+                    </div>
+                  </div>
+                  <div class="popup-cart-list__item">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="checkbox-two" type="checkbox" name="">
+                      <label class="checkbox__label" style="--cart-color: #E43535;" for="checkbox-two">Ростов на дону</label>
+                    </div><a class="popup-cart-list__item-edit"></a><a class="popup-cart-list__item-del"></a>
+                  </div>
+                  <div class="popup-cart-list__item">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="checkbox-free" type="checkbox" name="">
+                      <label class="checkbox__label" style="--cart-color: #FF9900;" for="checkbox-free">Воронеж</label>
+                    </div><a class="popup-cart-list__item-edit"></a><a class="popup-cart-list__item-del"></a>
+                  </div>
+                  <div class="popup-cart-list__item">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="checkbox-four" type="checkbox" name="">
+                      <label class="checkbox__label" style="--cart-color: #264CAF;" for="checkbox-four">Очень длинное название</label>
+                    </div><a class="popup-cart-list__item-edit"></a><a class="popup-cart-list__item-del"></a>
+                  </div>
+                  <div class="popup-cart-list__item">
+                    <div class="popup-cart-list__item-create">Создать новую корзину</div>
+                  </div>
+                </form>
+              </div>
+              <!-- попап удалить корзину-->
+              <div class="popup-cart popup-cart-del">
+                <form>
+                  <h3>Вы действительно хотите удолить корзину?</h3>
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="checkbox-del" type="checkbox" name="">
+                    <label class="checkbox__label" style="--cart-color: #264CAF;" for="checkbox-del">Очень длинное название</label>
+                  </div>
+                  <div class="popup-cart-del-btns">
+                    <button class="btn btn--green">Да</button>
+                    <button class="btn btn--red">Нет</button>
+                  </div>
+                </form>
+              </div>
+              <!-- попап создать корзину-->
+              <div class="popup-cart popup-cart-create">
+                <form>
+                  <h3>Создать новую корзину</h3>
+                  <div class="popup-cart-create-check">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="checkbox-del1" type="checkbox" name="">
+                      <label class="checkbox__label" style="--cart-color: #E43535;" for="checkbox-del1"></label>
+                    </div>
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="checkbox-del2" type="checkbox" name="">
+                      <label class="checkbox__label" style="--cart-color: #FF9900;" for="checkbox-del2"></label>
+                    </div>
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="checkbox-del3" type="checkbox" name="">
+                      <label class="checkbox__label" style="--cart-color: #264CAF;" for="checkbox-del3"></label>
+                    </div>
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="checkbox-del4" type="checkbox" name="">
+                      <label class="checkbox__label" style="--cart-color: #A8D600;" for="checkbox-del4"></label>
+                    </div>
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="checkbox-del5" type="checkbox" name="">
+                      <label class="checkbox__label" style="--cart-color: #00D1FF;" for="checkbox-del5"></label>
+                    </div>
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="checkbox-del6" type="checkbox" name="">
+                      <label class="checkbox__label" style="--cart-color: #FFCE31;" for="checkbox-del6"></label>
+                    </div>
+                  </div>
+                  <div class="popup-cart-create-btns">
+                    <button class="btn btn--silver">Отмена</button>
+                    <button class="btn">Создать</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- include nav-->
+    </header>
+    <section class="main-slider ">
+      <div class="main-slider-row1 container"><a class="btn btn--spes" href="">Спец цены</a><a class="btn btn--sale" href="">Действующие акции</a><a class="btn btn--new" href="">Новинки</a><a class="btn btn--ball" href="">Гимнастический мяч 55 см <span>720 руб</span></a></div>
+      <div class="main-slider__box container swiper-container">
+        <div class="main-slider__wrapper swiper-wrapper">
+                    <div class="main-slider-slide swiper-slide"><img src="assets/img/content/main-slider/banner.jpg" alt="#"></div>
+                    <div class="main-slider-slide swiper-slide"><img src="assets/img/content/main-slider/banner.jpg" alt="#"></div>
+                    <div class="main-slider-slide swiper-slide"><img src="assets/img/content/main-slider/banner.jpg" alt="#"></div>
+                    <div class="main-slider-slide swiper-slide"><img src="assets/img/content/main-slider/banner.jpg" alt="#"></div>
+        </div>
+      </div>
+    </section>
+    <main class="page-basket container">
+      <section class="page-basket-title">
+        <h2>Корзина</h2>
+        <div class="page-basket-title__quan">2 товара</div>
+      </section>
+      <div class="page-basket-tab tab">
+        <div class="tab__nav"><a class="tab__link tab__link--active" data-tab_link="1" href="#">Основная</a><a class="tab__link" data-tab_link="2" href="#">Магазин 1</a><a class="tab__link" data-tab_link="3" href="#">Магазин 2</a></div>
+        <div class="tab__content-item tab__content-item--active" data-tab_content="1">
+          <div class="page-basket-tab__left">
+            <div class="page-basket-tab__left-selected-all">
+              <label class="checkbox">
+                <input type="checkbox" name=""><span>выбрать всё</span>
+              </label>
+            </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+          </div>
+          <div class="page-basket-tab__right">
+            <button class="btn">Оформить заказ</button>
+            <div class="page-basket-tab__right-spec">
+              <div class="page-basket-tab__right-spec__li">Всего товаров 2</div>
+              <div class="page-basket-tab__right-spec__li">Вес 20 кг</div>
+              <div class="page-basket-tab__right-spec__li">Объём: 1.2 м<sup>2</sup></div>
+              <div class="page-basket-tab__right-spec__total">Итого <span>200 000 Р</div>
+            </div>
+            <div class="page-basket-tab__right-info">Сумма заказа в Вашей корзине позволяет перейти на колонку цен <strong>Опт 3</strong> Ориентировочная сумма заказа по колонке Опт 3 (руб) составит <strong>35702 руб.</strong> Точная сумма заказа будет определена после обработки заказа менеджером.</div>
+          </div>
+        </div>
+        <div class="tab__content-item" data-tab_content="2">
+          <div class="page-basket-tab__left">
+            <div class="page-basket-tab__left-selected-all">
+              <label class="checkbox">
+                <input type="checkbox" name=""><span>выбрать всё</span>
+              </label>
+            </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+          </div>
+          <div class="page-basket-tab__right">
+            <button class="btn">Оформить заказ</button>
+            <div class="page-basket-tab__right-spec">
+              <div class="page-basket-tab__right-spec__li">Всего товаров 2</div>
+              <div class="page-basket-tab__right-spec__li">Вес 20 кг</div>
+              <div class="page-basket-tab__right-spec__li">Объём: 1.2 м<sup>2</sup></div>
+              <div class="page-basket-tab__right-spec__total">Итого <span>200 000 Р</div>
+            </div>
+            <div class="page-basket-tab__right-info">Сумма заказа в Вашей корзине позволяет перейти на колонку цен <strong>Опт 3</strong> Ориентировочная сумма заказа по колонке Опт 3 (руб) составит <strong>35702 руб.</strong> Точная сумма заказа будет определена после обработки заказа менеджером.</div>
+          </div>
+        </div>
+        <div class="tab__content-item" data-tab_content="3">
+          <div class="page-basket-tab__left">
+            <div class="page-basket-tab__left-selected-all">
+              <label class="checkbox">
+                <input type="checkbox" name=""><span>выбрать всё</span>
+              </label>
+            </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+                        <div class="item-product-line">
+                          <label class="checkbox">
+                            <input type="checkbox" name=""><span></span>
+                          </label>
+                          <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
+                          <div class="item-product-line__descr-box">
+                            <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                            <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
+                            <div class="item-product-line__descr-box__stock-box">
+                              <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
+                              <div class="item-product-line__descr-box__stock-box__favorites"></div>
+                              <div class="item-product-line__descr-box__stock-box__bar"></div>
+                            </div>
+                          </div>
+                          <div class="item-product-line__spec-box">
+                            <div class="item-product-line__spec-box__price">1 053 Р</div>
+                            <div class="item-product-line__spec-box__quan-box">
+                              <input type="text" name="#" value="42"><a class="item-product-line__spec-box__quan-box__basket"></a>
+                            </div>
+                            <div class="item-product-line__spec-box__unit">Товарная единица: <strong>шт</strong></div>
+                            <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
+                          </div>
+                        </div>
+          </div>
+          <div class="page-basket-tab__right">
+            <button class="btn">Оформить заказ</button>
+            <div class="page-basket-tab__right-spec">
+              <div class="page-basket-tab__right-spec__li">Всего товаров 2</div>
+              <div class="page-basket-tab__right-spec__li">Вес 20 кг</div>
+              <div class="page-basket-tab__right-spec__li">Объём: 1.2 м<sup>2</sup></div>
+              <div class="page-basket-tab__right-spec__total">Итого <span>200 000 Р</div>
+            </div>
+            <div class="page-basket-tab__right-info">Сумма заказа в Вашей корзине позволяет перейти на колонку цен <strong>Опт 3</strong> Ориентировочная сумма заказа по колонке Опт 3 (руб) составит <strong>35702 руб.</strong> Точная сумма заказа будет определена после обработки заказа менеджером.</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-row1 container">
+        <nav class="footer__row-1-nav">
+          <h3>Компания BallMarket</h3>
+          <ul>
+                        <li><a href="/">О компании</a></li>
+                        <li><a href="/">Обратная связь</a></li>
+                        <li><a href="/">Политика конфидициальность</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__row-1-nav">
+          <h3>Покупателям</h3>
+          <ul>
+                        <li><a href="/">Прайс лист</a></li>
+                        <li><a href="/">Документы</a></li>
+                        <li><a href="/">Контанты</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__row-1-nav">
+          <h3>Помощь</h3>
+          <ul>
+                        <li><a href="/">Как оформить заказ</a></li>
+                        <li><a href="/">Как работать с сайтом</a></li>
+                        <li><a href="/">Задать вопрос</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__row-1-nav">
+          <h3>Остовайтесь на связи</h3>
+          <ul>
+                        <li><a href="#">ООО “БМ-РЕСТАРТ”</a></li>
+                        <li><a href="tel:+74951083296">+7 (495) 108-32-96</a></li>
+                        <li><a href="mailto:info@ballmarket.ru">info@ballmarket.ru</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="assets/js/main.js?v=undefined"></script>
+  </head>
+</html>

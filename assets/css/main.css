@@ -103,7 +103,7 @@ html .container {
   position: relative;
   z-index: 2;
   padding: 20px 14px;
-  border: 1px solid #9E9E9E;
+  border: 1px solid #CDCDCD;
   border-radius: 5px;
 }
 
@@ -177,15 +177,45 @@ html .container {
 .checkbox__label::before {
   width: 25px;
   height: 25px;
-  border: 1px solid #000000;
+  border: 1px solid #CDCDCD;
   border-radius: 3px;
   content: "";
   transition: all 0.3s;
 }
 
 .checkbox__input:checked + .checkbox__label:before {
-  background-color: #FFCB00;
-  border: none;
+  background: url("../img/icon/arr/check-black.svg") no-repeat center center;
+}
+
+label.checkbox {
+  cursor: pointer;
+}
+
+label.checkbox input {
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+label.checkbox input:checked + span:before {
+  background: url("../img/icon/arr/check-black.svg") no-repeat center center;
+}
+
+label.checkbox span {
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+label.checkbox span:before {
+  transition: all 0.5s;
+  border: 1px solid #CDCDCD;
+  width: 25px;
+  height: 25px;
+  content: "";
 }
 
 .radio {
@@ -348,7 +378,7 @@ html .container {
 
 h2 {
   font-size: 40px;
-  line-height: 0.55;
+  line-height: 1;
 }
 
 h3 {
@@ -1405,6 +1435,234 @@ h3 {
   font-size: 16px;
   line-height: 1.375;
   margin-bottom: 12px;
+}
+
+.page-basket {
+  padding: 20px;
+}
+
+.page-basket-title {
+  padding-bottom: 50px;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.page-basket-tab .tab__nav {
+  display: flex;
+  gap: 42px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.page-basket-tab .tab__link {
+  min-width: 150px;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-basket-tab .tab__link--active {
+  color: #000;
+  background: #ECECEC;
+  border-radius: 5px;
+  border-bottom: 3px solid red;
+}
+
+.page-basket-tab .tab__content-item {
+  display: flex;
+  gap: 40px;
+}
+
+.page-basket-tab__left {
+  flex: 1 1 auto;
+}
+
+.page-basket-tab__left-selected-all {
+  margin-bottom: 30px;
+  min-height: 38px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.page-basket-tab__left .item-product-line {
+  border-bottom: 1px solid #EAEAEA;
+  display: flex;
+  padding: 30px 0;
+}
+
+.page-basket-tab__left .item-product-line__img-box {
+  margin-left: 20px;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-basket-tab__left .item-product-line__descr-box {
+  margin-left: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page-basket-tab__left .item-product-line__descr-box__text {
+  font-size: 16px;
+  line-height: 1.625;
+}
+
+.page-basket-tab__left .item-product-line__descr-box__artical {
+  color: #666;
+}
+
+.page-basket-tab__left .item-product-line__descr-box__artical span {
+  color: #999;
+}
+
+.page-basket-tab__left .item-product-line__descr-box__stock-box {
+  min-height: 26px;
+  display: flex;
+  align-items: center;
+}
+
+.page-basket-tab__left .item-product-line__descr-box__stock-box__quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.page-basket-tab__left .item-product-line__descr-box__stock-box__quantity::before {
+  width: 22px;
+  height: 22px;
+  background: url("../img/icon/arr/arr-green.svg");
+  content: "";
+}
+
+.page-basket-tab__left .item-product-line__descr-box__stock-box__favorites {
+  width: 19px;
+  height: 17px;
+  background: url(../img/icon/heart-hit.svg);
+  margin-left: auto;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.page-basket-tab__left .item-product-line__descr-box__stock-box__favorites:hover {
+  background: url(../img/icon/heart-orahge.svg);
+}
+
+.page-basket-tab__left .item-product-line__descr-box__stock-box__bar {
+  margin-left: 20px;
+  width: 14px;
+  height: 18px;
+  background: url(../img/icon/bar-hit.svg);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.page-basket-tab__left .item-product-line__descr-box__stock-box__bar:hover {
+  background: url(../img/icon/bar-orange.png);
+}
+
+.page-basket-tab__left .item-product-line__spec-box {
+  margin-left: 60px;
+  min-width: 163px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page-basket-tab__left .item-product-line__spec-box__price {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.page-basket-tab__left .item-product-line__spec-box__quan-box {
+  height: 40px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.page-basket-tab__left .item-product-line__spec-box__quan-box input {
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 13px;
+  height: 100%;
+  width: 82px;
+  border: 1px solid #CDCDCD;
+  border-radius: 5px;
+}
+
+.page-basket-tab__left .item-product-line__spec-box__quan-box__basket {
+  width: 30px;
+  height: 30px;
+  background: url("../img/icon/del-grey.svg");
+}
+
+.page-basket-tab__left .item-product-line__spec-box__unit {
+  font-size: 13px;
+  line-height: 1.3846153846;
+}
+
+.page-basket-tab__right {
+  position: sticky;
+  top: 20px;
+  width: 317px;
+  height: 100px;
+}
+
+.page-basket-tab__right .btn {
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.page-basket-tab__right-spec {
+  border: 1px solid #EAEAEA;
+  background: linear-gradient(0deg, #EAEAEA, #EAEAEA), linear-gradient(0deg, #F4F4F4, #F4F4F4);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+.page-basket-tab__right-spec__li {
+  font-size: 14px;
+  line-height: 2.1428571429;
+}
+
+.page-basket-tab__right-spec__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 12px;
+  border-top: 1px solid #D0D0D0;
+  padding-top: 17px;
+  font-size: 20px;
+}
+
+.page-basket-tab__right-spec__total span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.page-basket-tab__right-info {
+  background: #D0EDFF;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  font-size: 12px;
+  line-height: 2;
 }
 
 @media (min-width: 91.25em) {
