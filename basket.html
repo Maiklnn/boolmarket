@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
     <meta name="description">
     <meta name="keywords" content="">
-    <title>Boolmarket главная</title>
+    <title>Boolmarket корзина</title>
     <link rel="stylesheet" href="assets/css/main.css?v=undefined">
     <body></body>
     <header class="header">
@@ -124,19 +124,25 @@
           </div>
         </div>
       </div>
+      <div class="header__row3">
+        <div class="container"><a class="btn btn--spes" href="">Спец цены</a><a class="btn btn--sale" href="">Действующие акции</a><a class="btn btn--new" href="">Новинки</a><a class="btn btn--ball" href="">Гимнастический мяч 55 см <span>720 руб</span></a></div>
+      </div>
       <!-- include nav-->
     </header>
-    <section class="main-slider ">
-      <div class="main-slider-row1 container"><a class="btn btn--spes" href="">Спец цены</a><a class="btn btn--sale" href="">Действующие акции</a><a class="btn btn--new" href="">Новинки</a><a class="btn btn--ball" href="">Гимнастический мяч 55 см <span>720 руб</span></a></div>
-      <div class="main-slider__box container swiper-container">
-        <div class="main-slider__wrapper swiper-wrapper">
-                    <div class="main-slider-slide swiper-slide"><img src="assets/img/content/main-slider/banner.jpg" alt="#"></div>
-                    <div class="main-slider-slide swiper-slide"><img src="assets/img/content/main-slider/banner.jpg" alt="#"></div>
-                    <div class="main-slider-slide swiper-slide"><img src="assets/img/content/main-slider/banner.jpg" alt="#"></div>
-                    <div class="main-slider-slide swiper-slide"><img src="assets/img/content/main-slider/banner.jpg" alt="#"></div>
-        </div>
-      </div>
-    </section>
+    <!-- - var class_slider = 'main-slider'-->
+    <!-- section(class=`${class_slider} `)
+    //div(class=`${class_slider}__box container swiper-container`)
+    //	div(class=`${class_slider}__wrapper swiper-wrapper`)
+    //
+    //		mixin item(img, title, descr)
+    //			div(class=`${class_slider}-slide swiper-slide`)
+    //				img(src=`${img}` alt=`#`)
+    //
+    //		+item('assets/img/content/main-slider/banner.jpg', '', '')
+    //		+item('assets/img/content/main-slider/banner.jpg', '', '')
+    //		+item('assets/img/content/main-slider/banner.jpg', '', '')
+    //		+item('assets/img/content/main-slider/banner.jpg', '', '')
+    -->
     <main class="page-basket container">
       <section class="page-basket-title">
         <h2>Корзина</h2>
