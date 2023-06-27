@@ -1,5 +1,13 @@
 
-<!-- - var classBody = 'page-info'; // класс для body--><!DOCTYPE html>
+<!-- - var classBody = 'page-info'; // класс для body-->
+<!--div(class=`exclusive-distrib__list`)-->
+<!--	mixin item(img, text)-->
+<!--		div(class=`item`)-->
+<!--			div(class=`item__logo-box`)-->
+<!--				img(src=`assets/img/landing/distr/exclusive/${img}` alt=`#`)-->
+<!--			div(class=`item__text`)= text-->
+<!---->
+<!--	+item('', '')--><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
@@ -7,7 +15,9 @@
     <meta name="description">
     <meta name="keywords" content="">
     <title>Boolmarket список товаров</title>
-    <link rel="stylesheet" href="assets/css/main.css?v=undefined">
+    <link rel="stylesheet" href="assets/css/main.css?v=undefined"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;0,700;1,300;1,700&display=swap" rel="stylesheet">
     <body></body>
     <header class="header">
       <div class="header__row1">
@@ -15,12 +25,14 @@
           <ul>
             <li><a href="#">Документы</a></li>
             <li><a href="#">О компании</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="/list-product.html">Каталог</a></li>
+            <li><a href="/basket.html">Корзина</a></li>
+            <li><a href="/landing.html">Лэндинг</a></li>
           </ul>
         </div>
       </div>
       <div class="header__row2">
-        <div class="container"><a class="header__row2-logo" href=""><img src="assets/img/logo.svg" alt="#"></a>
+        <div class="container"><a class="header__row2-logo" href="/"><img src="assets/img/logo.svg" alt="#"></a>
           <button class="btn"><span>1</span> Каталог</button>
           <form class="header__row2-search">
             <div class="placeholder-container">
@@ -299,10 +311,9 @@
           </div>
         </div>
         <div class="body__list">
-                    <div class="item-product-line">
+                    <div class="item-product-line" href="/">
                       <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
-                      <div class="item-product-line__descr-box">
-                        <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                      <div class="item-product-line__descr-box"><a class="item-product-line__descr-box__text" href="/card-product.html">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</a>
                         <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
                         <div class="item-product-line__descr-box__stock-box">
                           <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
@@ -338,10 +349,9 @@
                         <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
                       </div>
                     </div>
-                    <div class="item-product-line">
+                    <div class="item-product-line" href="/">
                       <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
-                      <div class="item-product-line__descr-box">
-                        <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                      <div class="item-product-line__descr-box"><a class="item-product-line__descr-box__text" href="/card-product.html">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</a>
                         <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
                         <div class="item-product-line__descr-box__stock-box">
                           <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
@@ -377,10 +387,9 @@
                         <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
                       </div>
                     </div>
-                    <div class="item-product-line">
+                    <div class="item-product-line" href="/">
                       <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
-                      <div class="item-product-line__descr-box">
-                        <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                      <div class="item-product-line__descr-box"><a class="item-product-line__descr-box__text" href="/card-product.html">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</a>
                         <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
                         <div class="item-product-line__descr-box__stock-box">
                           <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
@@ -416,10 +425,9 @@
                         <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
                       </div>
                     </div>
-                    <div class="item-product-line">
+                    <div class="item-product-line" href="/">
                       <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
-                      <div class="item-product-line__descr-box">
-                        <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                      <div class="item-product-line__descr-box"><a class="item-product-line__descr-box__text" href="/card-product.html">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</a>
                         <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
                         <div class="item-product-line__descr-box__stock-box">
                           <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
@@ -455,10 +463,9 @@
                         <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
                       </div>
                     </div>
-                    <div class="item-product-line">
+                    <div class="item-product-line" href="/">
                       <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
-                      <div class="item-product-line__descr-box">
-                        <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                      <div class="item-product-line__descr-box"><a class="item-product-line__descr-box__text" href="/card-product.html">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</a>
                         <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
                         <div class="item-product-line__descr-box__stock-box">
                           <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
@@ -494,10 +501,9 @@
                         <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
                       </div>
                     </div>
-                    <div class="item-product-line">
+                    <div class="item-product-line" href="/">
                       <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
-                      <div class="item-product-line__descr-box">
-                        <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                      <div class="item-product-line__descr-box"><a class="item-product-line__descr-box__text" href="/card-product.html">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</a>
                         <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
                         <div class="item-product-line__descr-box__stock-box">
                           <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
@@ -533,10 +539,9 @@
                         <div class="item-product-line__spec-box__unit">Количество в коробке: <strong>42</strong></div>
                       </div>
                     </div>
-                    <div class="item-product-line">
+                    <div class="item-product-line" href="/">
                       <div class="item-product-line__img-box"><img src="assets/img/content/product-main.jpg" alt="#"></div>
-                      <div class="item-product-line__descr-box">
-                        <div class="item-product-line__descr-box__text">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                      <div class="item-product-line__descr-box"><a class="item-product-line__descr-box__text" href="/card-product.html">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</a>
                         <div class="item-product-line__descr-box__artical"><span>Арт.</span> F321045</div>
                         <div class="item-product-line__descr-box__stock-box">
                           <div class="item-product-line__descr-box__stock-box__quantity"><span>Доступно на складе: <strong>1889</strong></span></div>
