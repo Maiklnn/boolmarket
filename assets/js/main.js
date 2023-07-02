@@ -4650,15 +4650,20 @@ document.addEventListener('click', function (e) {
   var select = element.closest('.select');
   if (select && element.tagName !== 'INPUT') {
     select.classList.toggle('is-active');
-    var label = element.closest('LABEL');
+    var label = element.closest('.select__body-item');
     if (label) {
-      select.querySelector('.select__header').textContent = label.querySelector('SPAN').textContent;
+      var selectHeader = select.querySelector('.select__header');
+      var selText = label.textContent;
+      var data = selText.split('-');
+      if (data[1]) selText = data[0];
+      selectHeader.textContent = selText;
+      if (data[1]) selectHeader.insertAdjacentHTML('afterBegin', "<span>".concat(data[1], "</span>"));
     }
   }
+
   // basket-checbox
   var checkbox = e.target;
   if (checkbox.classList.contains('checkbox') && checkbox.closest('.page-basket-tab__left-selected-all')) {
-    console.log(checkbox.textContent);
     var tab__left = checkbox.closest('.page-basket-tab__left');
     var checkeds = tab__left.querySelectorAll('.item-product-line input[type="checkbox"]');
     checkeds.forEach(function (item, i) {
@@ -4679,6 +4684,55 @@ document.addEventListener('click', function (e) {
     if (select_view_column && !list.classList.contains('product-list--column')) {
       list.classList.add('product-list--column');
     }
+  }
+});
+document.addEventListener('click', function (e) {
+  var target = e.target;
+  var clickedElement = target.closest('[data-show]');
+  if (clickedElement) {
+    e.preventDefault();
+    var data = target.dataset.show.split(':');
+    if (data[0] === 'all') {
+      if (data[1] === 'parent') {
+        var _parent = target.closest("[data-is_show]");
+        console.log(_parent);
+        var _is_show = _parent.querySelectorAll("[data-is_show=\"sub\"]");
+
+        // отключаем активные
+        var menu = document.querySelector(".cat-menu");
+        var close_show = menu.querySelectorAll("[data-is_show=\"sub\"]");
+        close_show.forEach(function (item) {
+          item.classList.remove('show');
+        });
+
+        // добовляем класс show к выбранным
+        _is_show.forEach(function (item) {
+          item.classList.toggle('show');
+        });
+      }
+      var is_show = document.querySelectorAll("[data-is-show=\"".concat(data[1], "\"]"));
+      is_show.forEach(function (item) {
+        item.classList.toggle('show');
+      });
+      return;
+    }
+    var word = target.dataset.word;
+    if (word) {
+      target.setAttribute('data-word', target.textContent);
+      target.textContent = word;
+    }
+    if (data[0]) {
+      var arrData = data[0].split('&&');
+      if (arrData[1]) {
+        parent = target.closest(arrData[0]);
+        parent = parent.querySelector(arrData[1]);
+      } else {
+        parent = target.closest(data[0]);
+      }
+      parent.classList.toggle('show');
+      return;
+    }
+    document.querySelector(data[0]).classList.toggle('show');
   }
 });
 //# sourceMappingURL=main.js.map

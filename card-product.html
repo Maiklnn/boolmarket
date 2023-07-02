@@ -1,24 +1,16 @@
-
-<!-- - var classBody = 'page-info'; // класс для body-->
-<!--div(class=`exclusive-distrib__list`)-->
-<!--	mixin item(img, text)-->
-<!--		div(class=`item`)-->
-<!--			div(class=`item__logo-box`)-->
-<!--				img(src=`assets/img/landing/distr/exclusive/${img}` alt=`#`)-->
-<!--			div(class=`item__text`)= text-->
-<!---->
-<!--	+item('', '')--><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
     <meta name="description">
     <meta name="keywords" content="">
-    <title>Boolmarket карточка товара</title>
+    <title>Ballmarket карточка товара</title>
     <link rel="stylesheet" href="assets/css/main.css?v=undefined"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;0,700;1,300;1,700&display=swap" rel="stylesheet">
-    <body></body>
+    <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@700&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Rubik:ital,wght@0,300;0,500;0,700;1,300;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body class="page-product-card">
     <header class="header">
       <div class="header__row1">
         <div class="container"><a class="header__line-phone" href="tel:+74952555549">+7 495 255 55 49 (c 08:00 до 17:00)</a>
@@ -33,7 +25,233 @@
       </div>
       <div class="header__row2">
         <div class="container"><a class="header__row2-logo" href="/"><img src="assets/img/logo.svg" alt="#"></a>
-          <button class="btn"><span>1</span> Каталог</button>
+          <div class="cat-menu-box">
+            <button class="btn" data-show=".cat-menu-box:del">
+              <div class="burger" data-show=".cat-menu-box:del"><span data-show=".cat-menu-box:del"></span></div>Каталог
+            </button>
+            <div class="cat-menu">
+              <nav class="cat-menu__nav">
+                <ul>
+                                    <li class="submenu new" data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/new.svg" alt="#"></div>
+                                        <div>Новинки</div></a><span data-show="all:parent"></span>
+                                      <div class="grid-submenu">
+                                        <ul data-is_show="sub">
+                                          <li class="main-cat"><a href="/">Футбол<span></span></a></li>
+                                          <li class="submenu"><a href="/">Мячи футбольные<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul class="submenu">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                          <li><a href="/">Мячи футзальные</a></li>
+                                          <li><a href="/">Мячи для пляжного футбола</a></li>
+                                          <li><a href="/">Мячи сувентрные</a></li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/">Футбольная экипировка<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/">Аксессуары<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Сетки футбольные</a></li>
+                                              <li><a href="/">Сетки и гасители футзальные</a></li>
+                                              <li><a href="/">Тренировачный инвентарь</a></li>
+                                              <li><a href="/">Аксесуры для мечей (насосы иглы и др.)</a></li>
+                                              <li><a href="/">Тележки, сумки/сетки для мячей</a></li>
+                                              <li><a href="/">Судейский инвентарь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="submenu hit" data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/hit.svg" alt="#"></div>
+                                        <div>Спец цены</div></a><span data-show="all:parent"></span>
+                                      <div class="grid-submenu">
+                                        <ul data-is_show="sub">
+                                          <li class="main-cat"><a href="/">Футбол<span></span></a></li>
+                                          <li class="submenu"><a href="/">Мячи футбольные<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul class="submenu">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                          <li><a href="/">Мячи футзальные</a></li>
+                                          <li><a href="/">Мячи для пляжного футбола</a></li>
+                                          <li><a href="/">Мячи сувентрные</a></li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/">Футбольная экипировка<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/">Аксессуары<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Сетки футбольные</a></li>
+                                              <li><a href="/">Сетки и гасители футзальные</a></li>
+                                              <li><a href="/">Тренировачный инвентарь</a></li>
+                                              <li><a href="/">Аксесуры для мечей (насосы иглы и др.)</a></li>
+                                              <li><a href="/">Тележки, сумки/сетки для мячей</a></li>
+                                              <li><a href="/">Судейский инвентарь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="submenu " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/3-shoes.svg" alt="#"></div>
+                                        <div>Обувь</div></a><span data-show="all:parent"></span>
+                                      <div class="grid-submenu">
+                                        <ul data-is_show="sub">
+                                          <li class="main-cat"><a href="/">Футбол<span></span></a></li>
+                                          <li class="submenu"><a href="/">Мячи футбольные<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul class="submenu">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                          <li><a href="/">Мячи футзальные</a></li>
+                                          <li><a href="/">Мячи для пляжного футбола</a></li>
+                                          <li><a href="/">Мячи сувентрные</a></li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/">Футбольная экипировка<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/">Аксессуары<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Сетки футбольные</a></li>
+                                              <li><a href="/">Сетки и гасители футзальные</a></li>
+                                              <li><a href="/">Тренировачный инвентарь</a></li>
+                                              <li><a href="/">Аксесуры для мечей (насосы иглы и др.)</a></li>
+                                              <li><a href="/">Тележки, сумки/сетки для мячей</a></li>
+                                              <li><a href="/">Судейский инвентарь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/4-futboll.svg" alt="#"></div>
+                                        <div>Футбол</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/5-volleyboll.svg" alt="#"></div>
+                                        <div>Волейбол</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/6-basket.svg" alt="#"></div>
+                                        <div>Баскетбол</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/7-polo.svg" alt="#"></div>
+                                        <div>Водное поло</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/8-gandboll.svg" alt="#"></div>
+                                        <div>Гандбол</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/9-regby.svg" alt="#"></div>
+                                        <div>Регби</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/10-badminton.svg" alt="#"></div>
+                                        <div>Бадминтон</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/11-lawn-tennis.svg" alt="#"></div>
+                                        <div>Большой теннис</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/12-single-combats.svg" alt="#"></div>
+                                        <div>Единоборства</div></a>
+                                    </li>
+                                    <li class=" Инвентарь" data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/13-Inventory.svg" alt="#"></div>
+                                        <div>Баскетбол</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/14-table-tennis.svg" alt="#"></div>
+                                        <div>Настольный тенис</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/15-swimming.svg" alt="#"></div>
+                                        <div>Плавание</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/16-sports-nets.svg" alt="#"></div>
+                                        <div>Сетки спортивные</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/17-sports-medicine.svg" alt="#"></div>
+                                        <div>Спортивная медицина</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/18-fitness.svg" alt="#"></div>
+                                        <div>Фитнес</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/19-floorball.svg" alt="#"></div>
+                                        <div>Флорбол</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/20-hockey.svg" alt="#"></div>
+                                        <div>Хоккей</div></a>
+                                    </li>
+                                    <li class=" " data-is_show="sub"><a href="/" style="/">
+                                        <div class="icon-box"><img src="assets/img/icon/icon-menu/21-equipment.svg" alt="#"></div>
+                                        <div>Экипировка спортивная</div></a>
+                                    </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
           <form class="header__row2-search">
             <div class="placeholder-container">
               <input type="text" name="#" placeholder=" " required>
@@ -136,65 +354,42 @@
           </div>
         </div>
       </div>
-      <div class="header__row3">
-        <div class="container"><a class="btn btn--spes" href="">Спец цены</a><a class="btn btn--sale" href="">Действующие акции</a><a class="btn btn--new" href="">Новинки</a><a class="btn btn--ball" href="">Гимнастический мяч 55 см <span>720 руб</span></a></div>
-      </div>
-      <!-- include nav-->
     </header>
-    <!-- - var class_slider = 'main-slider'-->
-    <!-- section(class=`${class_slider} `)
-    //div(class=`${class_slider}__box container swiper-container`)
-    //	div(class=`${class_slider}__wrapper swiper-wrapper`)
-    //
-    //		mixin item(img, title, descr)
-    //			div(class=`${class_slider}-slide swiper-slide`)
-    //				img(src=`${img}` alt=`#`)
-    //
-    //		+item('assets/img/content/main-slider/banner.jpg', '', '')
-    //		+item('assets/img/content/main-slider/banner.jpg', '', '')
-    //		+item('assets/img/content/main-slider/banner.jpg', '', '')
-    //		+item('assets/img/content/main-slider/banner.jpg', '', '')
-    -->
     <main class="page-card-product container">
+      <section class="sub-header"><a class="btn btn--spes" href="">Спец цены</a><a class="btn btn--sale" href="">Действующие акции</a><a class="btn btn--new" href="">Новинки</a><a class="btn btn--ball" href="">Гимнастический мяч 55 см <span>720 руб</span></a></section>
       <section class="top-part">
-        <div class="top-part__banner"><img src="assets/img/logo.svg" alt="#"></div>
-        <div class="top-part__breadcrumps"><a href="">Главная</a><a href="">Футлол</a><a href="">Футболная экипировка</a><span>Гетры</span></div>
+        <div class="banner"><img src="assets/img/content/banner.svg" alt="#"></div>
+        <div class="breadcrumps"><a href="">Главная</a><span>/</span><a href="">Футбол</a><span>/</span><a href="">Футболная экипировка</a><span>/</span><span>Гетры</span></div>
         <h1>Мяч вол. "TORRES Simple" арт.V32105, р.5, синт.кожа (ТПУ), маш. сшивка, бут. камера, бело-черный</h1>
       </section>
-      <section class="good">
-        <div class="good__box">
-          <div class="good__box__slider"></div>
-          <div class="good__box__specification">
-            <ul class="good__box__specification-size">Размер
-              <li>5</li>
-              <li>4</li>
-              <li>3</li>
-            </ul>
-            <ul class="good__box__specification-color">Цвет
-              <li><img src="assets/img/logo.svg" alt="#"></li>
-              <li><img src="assets/img/logo.svg" alt="#"></li>
-              <li><img src="assets/img/logo.svg" alt="#"></li>
-            </ul>
-            <ul class="good__box__specification-list">
-              <li> Артикул <span>V32105</span></li>
-              <li> Уровень <span>Тренировочный</span></li>
-              <li> Тип соединения панелей <span>Синт. кожа (полиуретан)</span></li>
-              <li> Количество панелей <span>12</span></li>
-              <li> Материал покрышки <span>Бутил</span></li>
-              <li> Страна производитель <span>ВЬЕТНАМ</span></li><a href="/"> Все характеристики</a>
+      <section class="product">
+        <div class="product__box">
+          <div class="slider"></div>
+          <div class="specification">
+            <p>Размер</p>
+            <ul class="specification__size-list"><a class="active" href="">5</a><a href="">4</a><a href="">3</a></ul>
+            <p>Цвет</p>
+            <ul class="specification__color-list"><a class="active" href=""><img src="assets/img/content/product-card/size1.png" alt="#"></a><a href=""><img src="assets/img/content/product-card/size2.png" alt="#"></a><a href=""><img src="assets/img/content/product-card/size3.png" alt="#"></a></ul>
+            <ul class="specification__list">
+              <li> <span><strong>Артикул</strong></span> <span>V32105</span></li>
+              <li> <span><strong>Уровень</strong></span> <span>Тренировочный</span></li>
+              <li> <span><strong>Материал покрышки</strong></span> <span>Синт. кожа (полиуретан)</span></li>
+              <li> <span><strong>Количество панелей</strong></span> <span>12</span></li>
+              <li> <span><strong>Материал покрышки</strong></span> <span>Бутил</span></li>
+              <li> <span><strong>Страна производитель</strong></span> <span>ВЬЕТНАМ</span></li><a href="/"> Все характеристики</a>
             </ul>
           </div>
-          <div>(class=`${class_name}__box__price`)
-            <div class="good__box__price-icon"><a class="good__box__price-icon-favorites" href="/">В избранное</a><a class="good__box__price-icon-compare" href="/">Сравнить</a></div>
-            <div class="good__box__price__inner">
-              <div class="good__box__price__inner-sale">-30%</div>
-              <div class="good__box__price__inner-price">21809 Р <span>31 520</span></div>
-              <div class="good__box__price__inner__qty">
+          <div class="right-box">
+            <div class="right-box__link"><a class="right-box__link__favorites" href="/">В избранное</a><a class="right-box__link__compare" href="/">Сравнить</a></div>
+            <div class="right-box__inner">
+              <div class="right-box__inner-sale">-30%</div>
+              <div class="right-box__inner-price">21809 Р <span>31 520</span></div>
+              <div class="right-box__inner__qty">
                 <input type="text" name="#" value="42"><a class="btn">В корзину</a>
               </div>
-              <div class="good__box__price__inner__qty-li">Количество в коробке: <span>42</span></div>
-              <div class="good__box__price__inner__qty-li">Базовая единица: <span>шт.</span></div>
-              <div class="good__box__price__stock">На складе <strong>1850 шт</strong></div>
+              <div class="right-box__qty-li">Количество в коробке: <span>42</span></div>
+              <div class="right-box__inner__qty-li">Базовая единица: <span>шт.</span></div>
+              <div class="right-box__stock">На складе <strong>1850 шт</strong></div>
             </div>
             <div class="history"><a class="history__link">История изменения цены <span>показать</span></a><a class="history__list"><a class="item active" href="">
                                   <div class="item__name">Опт.</div>
@@ -343,6 +538,6 @@
         </nav>
       </div>
     </footer>
-    <script src="assets/js/main.js?v=undefined"></script>
-  </head>
+  </body>
+  <script src="assets/js/main.js?v=undefined"></script>
 </html>
