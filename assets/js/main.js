@@ -9,6 +9,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 var Webnn = /*#__PURE__*/function () {
   function Webnn() {
     _classCallCheck(this, Webnn);
+    this.scroll();
     this.dynamicAdapt();
     this.events();
     this.lib();
@@ -22,10 +23,60 @@ var Webnn = /*#__PURE__*/function () {
       document.addEventListener('click', function (e) {
         _this.element = e;
         _this.target = e.target;
+        // scroll
+        if (_this.target.dataset.scroll) _this.scroll();
+        // select
+        _this.select_click = _this.target.closest('.select');
+        if (_this.select_click && _this.target.tagName !== 'INPUT') _this.select();
         // tab
         _this.tab_link = _this.target.closest('*[data-tab_link]');
         if (_this.tab_link) _this.tabs();
       });
+    }
+  }, {
+    key: "scroll",
+    value: function scroll() {
+      // прокрутка
+      // нижняя кнопка scroll
+      document.body.insertAdjacentHTML('beforeend', '<div class="scrollToTop" data-scroll = "body"></div>');
+      var scrollBtn = document.querySelector('.scrollToTop');
+
+      // header
+      var header = document.querySelector('.header');
+      window.onscroll = function () {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        scrollTop > 300 ? scrollBtn.classList.add("scrollToTop--show") : scrollBtn.classList.remove("scrollToTop--show");
+        if (header) scrollTop > 10 ? header.classList.add("header--fixed") : header.classList.remove("header--fixed");
+      };
+
+      // прокрутка к элементу
+      if (this.element) {
+        this.element.preventDefault();
+        /*
+        	ставим атрибут data-scroll=".company" элементу от которого скоролим
+        	в значении указываем id или класс элемнта до которого скролить
+        */
+        var scrollElem = this.target.dataset.scroll.split('--');
+        var scrollBlock = document.querySelector("".concat(scrollElem[0])); // получаем блок до которого скролим
+        scrollBlock.scrollIntoView({
+          behavior: 'smooth',
+          block: scrollElem[1]
+        });
+      } else {}
+    }
+  }, {
+    key: "select",
+    value: function select() {
+      this.select_click.classList.toggle('is-active');
+      var select_item = this.target.closest('.select__body-item');
+      if (select_item) {
+        var selectHeader = this.select_click.querySelector('.select__header');
+        var selText = select_item.textContent;
+        var data = selText.split('-');
+        if (data[1]) selText = data[0];
+        selectHeader.textContent = selText;
+        if (data[1]) selectHeader.insertAdjacentHTML('afterBegin', "<span>".concat(data[1], "</span>"));
+      }
     }
   }, {
     key: "tabs",
@@ -4646,21 +4697,6 @@ new Form();
 document.addEventListener('click', function (e) {
   var element = e.target;
 
-  // select
-  var select = element.closest('.select');
-  if (select && element.tagName !== 'INPUT') {
-    select.classList.toggle('is-active');
-    var label = element.closest('.select__body-item');
-    if (label) {
-      var selectHeader = select.querySelector('.select__header');
-      var selText = label.textContent;
-      var data = selText.split('-');
-      if (data[1]) selText = data[0];
-      selectHeader.textContent = selText;
-      if (data[1]) selectHeader.insertAdjacentHTML('afterBegin', "<span>".concat(data[1], "</span>"));
-    }
-  }
-
   // basket-checbox
   var checkbox = e.target;
   if (checkbox.classList.contains('checkbox') && checkbox.closest('.page-basket-tab__left-selected-all')) {
@@ -4690,11 +4726,9 @@ document.addEventListener('click', function (e) {
   var target = e.target;
   var clickedElement = target.closest('[data-show]');
 
-  /* поиск по дому безз атрибутов
-  
-  	то берёться значение из этого атрибута происходит поиcк по дому и найденому объекту добовляеться класс show
+  /* поиск по значению из атрибута
+  	происходит поиcк по дому и найденому объекту добовляеться класс show
   	если в атрибуте data-show=".right-box__history__list" нет данных которые разделяються разделителем :
-  
   */
 
   // parent: поиск родителя с атрибутом data-is_show=""
