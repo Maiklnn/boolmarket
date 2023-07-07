@@ -4689,50 +4689,71 @@ document.addEventListener('click', function (e) {
 document.addEventListener('click', function (e) {
   var target = e.target;
   var clickedElement = target.closest('[data-show]');
+
+  /* поиск по дому безз атрибутов
+  
+  	то берёться значение из этого атрибута происходит поиcк по дому и найденому объекту добовляеться класс show
+  	если в атрибуте data-show=".right-box__history__list" нет данных которые разделяються разделителем :
+  
+  */
+
+  // parent: поиск родителя с атрибутом data-is_show=""
+  // - добавление класса show всем объектам дом дерева которые являються детьми родителя с классом кототорый указан data-is_show=""
+
   if (clickedElement) {
     e.preventDefault();
-    var data = target.dataset.show.split(':');
-    if (data[0] === 'all') {
-      if (data[1] === 'parent') {
-        var _parent = target.closest("[data-is_show]");
-        console.log(_parent);
-        var _is_show = _parent.querySelectorAll("[data-is_show=\"sub\"]");
+    var dataShow = clickedElement.dataset.show;
+    var yesData = dataShow.includes(':');
+    var yesData2 = dataShow.includes('&&');
+    if (yesData || yesData2) {
+      var data = target.dataset.show.split(':');
+      if (data[0] === 'all') {
+        if (data[1] === 'parent') {
+          var _parent = target.closest("[data-is_show]");
+          console.log(_parent);
+          var _is_show = _parent.querySelectorAll("[data-is_show=\"sub\"]");
 
-        // отключаем активные
-        var menu = document.querySelector(".cat-menu");
-        var close_show = menu.querySelectorAll("[data-is_show=\"sub\"]");
-        close_show.forEach(function (item) {
-          item.classList.remove('show');
-        });
+          // отключаем активные
+          var menu = document.querySelector(".cat-menu");
+          var close_show = menu.querySelectorAll("[data-is_show=\"sub\"]");
+          close_show.forEach(function (item) {
+            item.classList.remove('show');
+          });
 
-        // добовляем класс show к выбранным
-        _is_show.forEach(function (item) {
+          // добовляем класс show к выбранным
+          _is_show.forEach(function (item) {
+            item.classList.toggle('show');
+          });
+        }
+        var is_show = document.querySelectorAll("[data-is-show=\"".concat(data[1], "\"]"));
+        is_show.forEach(function (item) {
           item.classList.toggle('show');
         });
+        return;
       }
-      var is_show = document.querySelectorAll("[data-is-show=\"".concat(data[1], "\"]"));
-      is_show.forEach(function (item) {
-        item.classList.toggle('show');
-      });
+      var word = target.dataset.word;
+      if (word) {
+        target.setAttribute('data-word', target.textContent);
+        target.textContent = word;
+      }
+      if (data[0]) {
+        var arrData = data[0].split('&&');
+        if (arrData[1]) {
+          parent = target.closest(arrData[0]);
+          parent = parent.querySelector(arrData[1]);
+        } else {
+          parent = target.closest(data[0]);
+        }
+        parent.classList.toggle('show');
+        return;
+      }
       return;
     }
-    var word = target.dataset.word;
-    if (word) {
-      target.setAttribute('data-word', target.textContent);
-      target.textContent = word;
-    }
-    if (data[0]) {
-      var arrData = data[0].split('&&');
-      if (arrData[1]) {
-        parent = target.closest(arrData[0]);
-        parent = parent.querySelector(arrData[1]);
-      } else {
-        parent = target.closest(data[0]);
-      }
-      parent.classList.toggle('show');
-      return;
-    }
-    document.querySelector(data[0]).classList.toggle('show');
+    var elementShow = document.querySelector(dataShow);
+    elementShow.classList.toggle('show');
   }
+
+  // Удалени классв show
+  if (target.dataset.close) target.classList.remove('show');
 });
 //# sourceMappingURL=main.js.map
