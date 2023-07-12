@@ -4784,10 +4784,148 @@ document.addEventListener('click', function (e) {
       return;
     }
     var elementShow = document.querySelector(dataShow);
+
+    // если модальное окно загрузки
+    if (dataShow === "[data-popup='popup-load']") {
+      var load = clickedElement.querySelector('[data-load]');
+      if (load) {
+        load = load.dataset.load;
+        elementShow.textContent = '';
+        var popapInsert = "\n\t\t\t\t\t<div class=\"modal-popup__close\" data-show=\"[data-popup='popup-load']\"></div>\n\t                <div class=\"popup-img\">\n\t                \t<div class=\"popup-img__wrapper\">\n\t                \t\t<div class=\"popup-img__wrapper-img\">\n\t                \t\t\t".concat(load, "\n\t                \t\t</div>\n\t                \t</div>\n\t                </div>\t\n\t\t\t\t");
+        elementShow.insertAdjacentHTML('beforeend', popapInsert);
+      }
+    }
     elementShow.classList.toggle('show');
   }
 
   // Удалени классв show
   if (target.dataset.close) target.classList.remove('show');
 });
+var gal = document.querySelector('.gallery-slider');
+if (gal) {
+  gal.insertAdjacentHTML('beforeBegin', '<div id="gallery-slider"></div>');
+  Vue.createApp({
+    template: "\n\t\t\t<div class=\"gallery-slider\">\n\t\t\t\n\t\t\t    <div class=\"gallery-slider__large-img\" @click=\"handler_show('large')\">\n\t\t\t        <img :src=\"img_large\" alt=\"\">\n\t\t\t    </div>\n\t\t\t    \n\t\t\t    \n\t\t\t\t<div class=\"gallery-slider__small\"> \n\t\t\t\n\t\t\t\t\t<div \n\t\t\t\t\t\tclass=\"gallery-slider__small-img\" \n\t\t\t\t\t\t:style=\"shift\" >\n\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t:class=\"['el', {'active': currentSlide === i}]\"\n\t\t\t\t\t\t\tv-for=\"(item, i) in evenItems\"\n\t\t\t\t\t\t\t:key=\"item\"\n\t\t\t\t\t\t\t@click=\"handler_show(i)\"\n\t\t\t\t\t\t\tv-html=\"item.html\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t            \n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t<div :class=\"['modal-popup', {'show': show_popup}]\" @click=\"remove_show\">\n\t\t\t\t\t<div class=\"modal-popup__close\"></div>\n\n\t\t\t\t        <div class=\"popup-img\" @click.stop>\n\t\t\t\t        \n\t\t\t\t      \n\t\t\t\t            \t<div class=\"popup-img__wrapper\">\n\t\t\t\t\t                <div \n\t\t\t\t\t                    class=\"popup-img__wrapper-prev\"\n\t\t\t\t\t                    v-if=\"arr_last\" \n\t\t\t\t\t                    @click=\"prev\" \n\t\t\t\t\t                >\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div class=\"popup-img__wrapper-img\">\n\t\t\t\t\t\t\t\t\t\t<img :src=\"img_large\" alt=\"\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t                <div \n\t\t\t\t\t                    class=\"popup-img__wrapper-next\"\n\t\t\t\t\t                    v-if=\"arr_next\" \n\t\t\t\t\t                    @click=\"next\" \n\t\t\t\t\t                >\n\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t                </div>\n\t\t\t\t               \n\t\t\t\t\t\t\t\t\n\t\t\t\t        \n\t\t\t\t        </div>\n\t\t\t\t</div>\n\t\t\t\t    \n\t\t\t</div>    \n\t\t",
+    data: function data() {
+      return {
+        show_popup: false,
+        items: [],
+        number: 0,
+        img_large: '',
+        currentSlide: 0,
+        arr_next: true,
+        arr_last: false,
+        size_shift: 0
+      };
+    },
+    methods: {
+      handler_show: function handler_show(i) {
+        if (i !== 'large') {
+          this.currentSlide = i;
+          this.img_large = this.items[i].large;
+        } else {
+          this.show_popup = true;
+        }
+      },
+      remove_show: function remove_show() {
+        this.show_popup = false;
+      },
+      prev: function prev() {
+        this.shift = "transform: translateX(0)";
+        if (this.show_popup) {
+          this.img_large = this.items[this.number - 1].large;
+        }
+        this.number--;
+        this.currentSlide = this.number;
+        if (this.number > this.qtySlide) {
+          this.size_shift = this.size_shift - this.widthSlide;
+          this.shift = "transform: translateX(-".concat(this.size_shift, "px)");
+        } else {
+          this.size_shift = 0;
+        }
+        if (this.number < this.items.length - 1) {
+          this.arr_next = true;
+        }
+        if (!this.number) {
+          this.arr_last = false;
+        }
+      },
+      next: function next() {
+        if (this.show_popup) {
+          this.img_large = this.items[this.number + 1].large;
+        }
+        this.number++;
+        if (this.number === 1 && !this.show_popup) {
+          // this.shift = `transform: translateX(-640px)`
+          this.number = this.qtySlide + 1;
+        }
+        this.currentSlide = this.number;
+
+        // сдвиг
+        if (this.number > this.qtySlide) {
+          this.size_shift = this.size_shift + this.widthSlide;
+          this.shift = "transform: translateX(-".concat(this.size_shift, "px)");
+        } else {
+          this.size_shift = 0;
+        }
+        console.log('shift ' + this.shift);
+        console.log('number ' + this.number);
+
+        // стрелки
+        if (this.number > this.items.length - 2) {
+          this.arr_next = false;
+        }
+        if (this.number) {
+          this.arr_last = true;
+        }
+      },
+      keyDownHandler: function keyDownHandler(e) {
+        if (e.key === 'ArrowRight') this.next();
+        if (e.key === 'ArrowLeft') this.prev();
+        if (e.key === 'Escape') this.remove_show();
+      },
+      resizeHandler: function resizeHandler(e) {
+        console.log(document.documentElement.clientWidth);
+      }
+    },
+    computed: {
+      evenItems: function evenItems() {
+        var _this3 = this;
+        var gal = document.querySelector('.gallery-slider__small-img');
+        var items = gal.querySelectorAll('.el');
+        gal.remove();
+        items.forEach(function (item) {
+          var img = item.querySelector('img');
+          var obj = {
+            html: img.outerHTML,
+            small: img.src,
+            large: img.dataset.large
+          };
+          _this3.items.push(obj);
+        });
+        this.img_large = this.items[0].large;
+        return this.items;
+      },
+      calc: function calc() {
+        var clientWidth = document.documentElement.clientWidth;
+        if (clientWidth > 600) {
+          this.qtySlide = 3, this.widthSlider = 270;
+          this.widthSlide = this.widthSlider / (this.qtySlide + 1);
+        } else {
+          this.gap = 10, this.qtySlide = 1, this.widthSlider = 300;
+          this.widthSlide = this.widthSlider / (this.qtySlide + 1);
+        }
+        return this.widthSlider;
+      }
+    },
+    created: function created() {
+      window.addEventListener('keydown', this.keyDownHandler);
+      window.addEventListener("resize", this.resizeHandler);
+    },
+    destroyed: function destroyed() {
+      window.removeEventListener('keydown', this.keyDownHandler);
+      window.removeEventListener("resize", this.resizeHandler);
+    }
+  }).mount('#gallery-slider');
+}
 //# sourceMappingURL=main.js.map

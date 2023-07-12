@@ -326,6 +326,7 @@
     </header>
     <!-- попап создать корзину-->
     <div class="modal-popup" data-close="1" data-popup="create-basket">
+      <div class="modal-popup__close" data-show="[data-popup='create-basket']"></div>
       <form class="create-basket">
         <h3>Создать новую корзину</h3>
         <div class="create-basket__checkbox-box">
@@ -368,6 +369,8 @@
         </div>
       </form>
     </div>
+    <!-- Попап загрузок-->
+    <div class="modal-popup" data-close="1" data-popup="popup-load"></div>
     <main class="page-basket container">
       <section class="page-basket-title">
         <h2>Корзина</h2>
@@ -932,6 +935,6 @@
         </nav>
       </div>
     </footer>
-  </body>
+  </body><script src="https://unpkg.com/vue@next"></script>
   <script src="assets/js/main.js?v=undefined"></script>
 </html>
