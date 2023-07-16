@@ -24,7 +24,11 @@
         </div>
       </div>
       <div class="header__row2">
-        <div class="container"><a class="header__row2-logo" href="/"><img src="assets/img/logo.svg" alt="#"></a>
+        <div class="container">
+          <!-- a(class=`${class_name}__row2-logo` href='/')-->
+          <!--	img(src='assets/img/logo.svg' alt=`#`)-->
+          <!--a(class=`${class_name}__row2-logo` href='/' data-show="[data-popup='popup-load']")-->
+          <!--	img(src='assets/img/logo.svg' data-load = '<img src="assets/img/logo.svg">' alt=`#`)--><a class="header__row2-logo" href="/" data-show-load="true"><img src="assets/img/logo.svg" data-load="<img src=&quot;assets/img/logo.svg&quot;/>" alt="#"></a>
           <div class="cat-menu-box">
             <button class="btn" data-show=".cat-menu-box:del">
               <div class="burger" data-show=".cat-menu-box:del"><span data-show=".cat-menu-box:del"></span></div>Каталог
