@@ -359,6 +359,31 @@ var Webnn = /*#__PURE__*/function () {
         },
         breakpoints: {}
       });
+
+      // slider goods
+      var sliders = document.querySelectorAll('.slider__box');
+      sliders.forEach(function (item) {
+        var dataSpaceBetween = item.querySelector('[data-spacebetween]');
+        var spaceBetween = dataSpaceBetween ? dataSpaceBetween.dataset.spacebetween : 16;
+        new Swiper(item, {
+          spaceBetween: +spaceBetween,
+          autoplay: {
+            delay: 1000
+          },
+          speed: 2000,
+          slideToClickedSlide: true,
+          loop: true,
+          navigation: {
+            nextEl: item.querySelector('.slider-navigation__next'),
+            prevEl: item.querySelector(".slider-navigation__prev")
+          },
+          breakpoints: {
+            200: {
+              slidesPerView: 4
+            }
+          }
+        });
+      });
     }
   }, {
     key: "lib",
@@ -4619,6 +4644,38 @@ var Webnn = /*#__PURE__*/function () {
   return Webnn;
 }();
 new Webnn();
+function counterNum() {
+  function outNum(num, elem, n, step, time) {
+    // let l = document.querySelector('#' + elem);
+    var t = Math.round(time / (num / step));
+    var interval = setInterval(function () {
+      n = n + step;
+      if (n === num) clearInterval(interval);
+      elem.innerHTML = n;
+    }, t);
+  }
+  function getNumber(str) {
+    return +str.replace(/\D/g, '');
+  }
+  var counterNumArray = document.querySelectorAll('[data-counterAuto]');
+  var time;
+  var step;
+  var start;
+  var end;
+  counterNumArray.forEach(function (counterNum) {
+    var elem = counterNum;
+    var params = elem.dataset.counterauto;
+    var paramsArr = params.split(':');
+    paramsArr.forEach(function (item) {
+      if (item.includes("start")) start = getNumber(item);
+      if (item.includes("end")) end = getNumber(item);
+      if (item.includes("step")) step = getNumber(item);
+      if (item.includes("time")) time = getNumber(item);
+    });
+    outNum(end, elem, start, step, time);
+  });
+}
+counterNum();
 
 // form
 var Form = /*#__PURE__*/function () {
@@ -4776,8 +4833,7 @@ var Popup = /*#__PURE__*/function () {
     }
   }]);
   return Popup;
-}();
-new Popup();
+}(); // new Popup();
 document.addEventListener('click', function (e) {
   var element = e.target;
 
@@ -4868,29 +4924,7 @@ document.addEventListener('click', function (e) {
       return;
     }
     var elementShow = document.querySelector(dataShow);
-
-    // если модальное окно загрузки
-    // if(dataShow === "[data-popup='popup-load']") {
-    // 	let load = clickedElement.querySelector('[data-load]')
-    // 	if(load) {
-    // 		load = load.dataset.load
-    // 		elementShow.textContent = ''
-    // 		let popapInsert  = `
-    // 			<div class="modal-popup__close" data-show="[data-popup='popup-load']"></div>
-    //             <div class="popup-img">
-    //             	<div class="popup-img__wrapper">
-    //             		<div class="popup-img__wrapper-img">
-    //             			${load}
-    //             		</div>
-    //             	</div>
-    //             </div>
-    // 		`
-    //
-    // 		elementShow.insertAdjacentHTML('beforeend', popapInsert)
-    // 	}
-    // }
-
-    // elementShow.classList.toggle('show')
+    elementShow.classList.toggle('show');
   }
 
   // Удалени классв show

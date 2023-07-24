@@ -11,32 +11,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@700&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Rubik:ital,wght@0,300;0,500;0,700;1,300;1,700&display=swap" rel="stylesheet">
   </head>
   <body class="landing">
-    <header class="head">
+    <header class="header">
       <div class="row-top  container">
         <div class="logo-box"><a class="logo" href="/"><img src="assets/img/landing/logo.svg" alt="#"></a>
           <div class="logo-box__text">Оптовая продажа <br>спортивного инвентаря <span>Работаем с 2008 года</span></div>
         </div>
         <div class="row-top__phone-box"><a class="phone" href="tel:+74951083296">+7 (495) 108-32-96</a><span>Перезвоните мне</span></div>
-        <div class="row-top__user-box"><a class="btn" href="" data-scroll=".form-landing">Заявка на регистрацию</a><a class="row-top__user-box__start" href="/">Войти в личный кабинет</a></div>
+        <div class="row-top__user-box"><a class="btn" href="" data-show="[data-popup='lend-popup']">Заявка на регистрацию</a><a class="row-top__user-box__start" href="/">Войти в личный кабинет</a></div>
       </div>
       <div class="body  container">
         <h1>Спортивные мячи, аксессуары, обувь и многое другое оптом, напрямую с нашего склада</h1>
         <div class="body__list">
-                    <div class="item">
-                      <div class="item__caption">Более</div>
-                      <div class="item__qty">40</div>
-                      <div class="item__qty-caption">Брендов</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__caption">В ассортименте</div>
-                      <div class="item__qty">21</div>
-                      <div class="item__qty-caption">Категория</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__caption">На рынке с</div>
-                      <div class="item__qty">2008</div>
-                      <div class="item__qty-caption">Года</div>
-                    </div>
+          <div class="item">
+            <div class="item__caption">Более</div>
+            <div class="item__qty" data-counterAuto="start=0:end=40:step=1:time=2000">40</div>
+            <div class="item__qty-caption">Брендов</div>
+          </div>
+          <div class="item">
+            <div class="item__caption">В ассортименте</div>
+            <div class="item__qty" data-counterAuto="start=0:end=21:step=1:time=2000">21</div>
+            <div class="item__qty-caption">Категория</div>
+          </div>
+          <div class="item">
+            <div class="item__caption">На рынке с</div>
+            <div class="item__qty" data-counterAuto="start=1600:end=2008:step=1:time=500">2008</div>
+            <div class="item__qty-caption">Года</div>
+          </div>
+          <!--+item('Более', '40', 'Брендов')-->
+          <!--+item('В ассортименте', '21', 'Категория')-->
+          <!--+item('На рынке с', '2008', 'Года')-->
         </div><a class="body__detail" href="/" data-scroll=".who-we">Узнать подробнее</a>
       </div>
     </header>
@@ -98,17 +101,18 @@
                         </div>
           </div>
         </div>
-        <div class="all">
+        <div class="all"></div>
+        <section class="slider-logo container">
           <h3>И еще более 40 брендов</h3>
-          <div class="all__list">
-                        <div class="item">
-                          <div class="item__logo-box"><img src="assets/img/landing/distr/oficial/adidas.svg" alt="#"></div>
-                        </div>
-                        <div class="item">
-                          <div class="item__logo-box"><img src="assets/img/landing/distr/oficial/nike.svg" alt="#"></div>
-                        </div>
+          <div class="slider__box swiper-container">
+            <div class="swiper-wrapper">
+                            <div class="slider-logo-slide swiper-slide"><img src="assets/img/landing/distr/oficial/adidas.svg" alt="#"></div>
+                            <div class="slider-logo-slide swiper-slide"><img src="assets/img/landing/distr/oficial/nike.svg" alt="#"></div>
+                            <div class="slider-logo-slide swiper-slide"><img src="assets/img/landing/distr/oficial/adidas.svg" alt="#"></div>
+                            <div class="slider-logo-slide swiper-slide"><img src="assets/img/landing/distr/oficial/nike.svg" alt="#"></div>
+            </div>
           </div>
-        </div><a class="${class_name}__btn btn" href="">Смотреть весь ассортимент</a>
+        </section><a class="${class_name}__btn btn" href="">Смотреть весь ассортимент</a>
       </section>
       <section class="advantages">
         <h2>Основные преимущества работы с Ballmarket.ru</h2>
@@ -160,37 +164,46 @@
         <h2>Заявка на регистрацию</h2>
         <form class="form-landing-form">
           <div class="placeholder-container">
-            <input type="text" name="#" placeholder=" " required>
-            <div class="caption">Название компании</div>
+            <input type="text" name="#" placeholder="Название компании" required>
           </div>
           <div class="placeholder-container">
-            <input type="text" name="#" placeholder=" " required>
-            <div class="caption">E-mail</div>
+            <input type="text" name="#" placeholder="E-mail" required>
           </div>
           <div class="placeholder-container">
-            <input type="text" name="#" placeholder=" " required>
-            <div class="caption"> ИНН</div>
+            <input type="text" name="#" placeholder="ИНН" required>
           </div>
           <div class="placeholder-container">
-            <input type="text" name="#" data-mask="tel" placeholder=" " required>
-            <div class="caption"> Телефон</div>
+            <input type="text" name="#" data-mask="tel" placeholder="Телефон" required>
           </div>
           <div class="placeholder-container">
-            <input type="text" name="#" placeholder=" " required>
-            <div class="caption"> Город</div>
+            <input type="text" name="#" placeholder="Город" required>
           </div>
           <div class="placeholder-container">
-            <input type="text" name="#" placeholder=" " required>
-            <div class="caption"> Контактное лицо</div>
+            <input type="text" name="#" placeholder="Контактное лицо" required>
           </div>
           <div class="placeholder-container texarea">
-            <textarea type="text" name="#" placeholder=" "></textarea>
-            <div class="caption"> Дополнительная информация</div>
+            <textarea type="text" name="#" placeholder="Дополнительная информация"></textarea>
           </div>
           <div class="captcha"><img src="assets/img/captcha.jpg" alt="#"></div>
           <button class="btn" data-form="true">Отправить</button>
         </form>
       </section>
+      <div class="modal-popup" data-close="1" data-popup="lend-popup">
+        <form class="lend-popup">
+          <div class="modal-popup-close" data-show="[data-popup='lend-popup']"></div>
+          <h3>Заполните данные</h3>
+          <div class="placeholder-container">
+            <input type="text" name="#" placeholder="Имя" required>
+          </div>
+          <div class="placeholder-container">
+            <input type="tel" name="#" data-mask="tel" placeholder="Телефон" required>
+          </div>
+          <div class="placeholder-container">
+            <input type="text" name="#" placeholder="Название компании " required>
+          </div>
+          <button class="btn">Отправить</button>
+        </form>
+      </div>
     </main>
   </body>
   <script src="assets/js/vue.js"></script>

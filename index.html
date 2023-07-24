@@ -24,11 +24,7 @@
         </div>
       </div>
       <div class="header__row2">
-        <div class="container">
-          <!-- a(class=`${class_name}__row2-logo` href='/')-->
-          <!--	img(src='assets/img/logo.svg' alt=`#`)-->
-          <!--a(class=`${class_name}__row2-logo` href='/' data-show="[data-popup='popup-load']")-->
-          <!--	img(src='assets/img/logo.svg' data-load = '<img src="assets/img/logo.svg">' alt=`#`)--><a class="header__row2-logo" href="/"><img src="assets/img/logo.svg" alt="#" data-popup-load="true"></a>
+        <div class="container"><a class="header__row2-logo" href="/"><img src="assets/img/logo.svg" alt="#"></a>
           <div class="cat-menu-box">
             <button class="btn" data-show=".cat-menu-box:del">
               <div class="burger" data-show=".cat-menu-box:del"><span data-show=".cat-menu-box:del"></span></div>Каталог
@@ -285,8 +281,7 @@
           </div>
           <form class="header__row2-search">
             <div class="placeholder-container">
-              <input type="text" name="#" placeholder=" " required>
-              <div class="caption">Поиск...</div>
+              <input type="text" name="#" placeholder="Поиск..." required>
               <button class="btn"></button>
             </div>
           </form>
@@ -298,7 +293,8 @@
               <div class="header__row2-right-user-icon"></div>
               <p>Профиль</p></a>
             <div class="header__row2-right-cart">
-              <div class="header__row2-right-cart-caption">0 &#x20bd;</div>
+              <div class="header__row2-right-cart-caption active">5900 &#x20bd;</div>
+              <p>Корзина</p>
               <!-- попап списка корзин-->
               <div class="popup-cart popup-cart-list">
                 <form>
@@ -549,6 +545,7 @@
 	<h2>Сезон открытой воды обявляем открытым!</h2>
 	<div class="water-season__body">
 		<div class="water-season-slider__box swiper-container">
+			
 			<div class="water-season__body-list swiper-wrapper">
 				<div class="item-product swiper-slide">
 					<div class="item-product-img-box"><img src="assets/img/content/seazon/1.jpg" alt="#"></div>
