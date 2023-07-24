@@ -28,7 +28,7 @@
           <!-- a(class=`${class_name}__row2-logo` href='/')-->
           <!--	img(src='assets/img/logo.svg' alt=`#`)-->
           <!--a(class=`${class_name}__row2-logo` href='/' data-show="[data-popup='popup-load']")-->
-          <!--	img(src='assets/img/logo.svg' data-load = '<img src="assets/img/logo.svg">' alt=`#`)--><a class="header__row2-logo" href="/" data-show-load="true"><img src="assets/img/logo.svg" data-load="<img src=&quot;assets/img/logo.svg&quot;/>" alt="#"></a>
+          <!--	img(src='assets/img/logo.svg' data-load = '<img src="assets/img/logo.svg">' alt=`#`)--><a class="header__row2-logo" href="/"><img src="assets/img/logo.svg" alt="#" data-popup-load="true"></a>
           <div class="cat-menu-box">
             <button class="btn" data-show=".cat-menu-box:del">
               <div class="burger" data-show=".cat-menu-box:del"><span data-show=".cat-menu-box:del"></span></div>Каталог
@@ -36,194 +36,198 @@
             <div class="cat-menu">
               <nav class="cat-menu__nav">
                 <ul>
-                                    <li class="submenu new" data-is_show="sub"><a href="/">
+                                    <li class="submenu new" data-is_show="sub"><a class="undefined" href="/" data-show="all:parent">
                                         <div class="icon-box" data-show="all:parent"><img src="assets/img/icon/icon-menu/new.svg" alt="#"></div>
-                                        <div data-show="all:parent">Новинки</div></a><span data-show="all:parent">
-                                        <div class="grid-submenu">
-                                          <ul data-is_show="sub">
-                                            <li class="main-cat"><a href="/">Футбол<span></span></a></li>
-                                            <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Мячи футбольные<span data-show=".submenu&amp;&amp;ul"></span></a>
-                                              <ul class="submenu">
-                                                <li><a href="/">Щетки футболные</a></li>
-                                                <li><a href="/">Перчатки вратарские</a></li>
-                                                <li><a href="/">Гетры</a></li>
-                                                <li><a href="/">Капитанские повязки</a></li>
-                                                <li><a href="/">Машинки</a></li>
-                                                <li><a href="/">Форма футбольная</a></li>
-                                                <li><a href="/">Обувь</a></li>
-                                              </ul>
-                                            </li>
-                                            <li><a href="/">Мячи футзальные</a></li>
-                                            <li><a href="/">Мячи для пляжного футбола</a></li>
-                                            <li><a href="/">Мячи сувентрные</a></li>
-                                          </ul>
-                                          <ul data-is_show="sub">
-                                            <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Футбольная экипировка<span data-show=".submenu&amp;&amp;ul"></span></a>
-                                              <ul data-is_show="sub">
-                                                <li><a href="/">Щетки футболные</a></li>
-                                                <li><a href="/">Перчатки вратарские</a></li>
-                                                <li><a href="/">Гетры</a></li>
-                                                <li><a href="/">Капитанские повязки</a></li>
-                                                <li><a href="/">Машинки</a></li>
-                                                <li><a href="/">Форма футбольная</a></li>
-                                                <li><a href="/">Обувь</a></li>
-                                              </ul>
-                                            </li>
-                                          </ul>
-                                          <ul data-is_show="sub">
-                                            <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Аксессуары<span data-show=".submenu&amp;&amp;ul"></span></a>
-                                              <ul data-is_show="sub">
-                                                <li><a href="/">Сетки футбольные</a></li>
-                                                <li><a href="/">Сетки и гасители футзальные</a></li>
-                                                <li><a href="/">Тренировачный инвентарь</a></li>
-                                                <li><a href="/">Аксесуры для мечей (насосы иглы и др.)</a></li>
-                                                <li><a href="/">Тележки, сумки/сетки для мячей</a></li>
-                                                <li><a href="/">Судейский инвентарь</a></li>
-                                              </ul>
-                                            </li>
-                                          </ul>
-                                        </div></span></li>
-                                    <li class="submenu hit" data-is_show="sub"><a href="/">
+                                        <div data-show="all:parent">Новинки</div><span data-show="all:parent"></span></a>
+                                      <div class="grid-submenu">
+                                        <ul data-is_show="sub">
+                                          <li class="main-cat"><a href="/">Футбол<span></span></a></li>
+                                          <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Мячи футбольные<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul class="submenu">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                          <li><a href="/">Мячи футзальные</a></li>
+                                          <li><a href="/">Мячи для пляжного футбола</a></li>
+                                          <li><a href="/">Мячи сувентрные</a></li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Футбольная экипировка<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Аксессуары<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Сетки футбольные</a></li>
+                                              <li><a href="/">Сетки и гасители футзальные</a></li>
+                                              <li><a href="/">Тренировачный инвентарь</a></li>
+                                              <li><a href="/">Аксесуры для мечей (насосы иглы и др.)</a></li>
+                                              <li><a href="/">Тележки, сумки/сетки для мячей</a></li>
+                                              <li><a href="/">Судейский инвентарь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="submenu hit" data-is_show="sub"><a class="undefined" href="/" data-show="all:parent">
                                         <div class="icon-box" data-show="all:parent"><img src="assets/img/icon/icon-menu/hit.svg" alt="#"></div>
-                                        <div data-show="all:parent">Спец цены</div></a><span data-show="all:parent">
-                                        <div class="grid-submenu">
-                                          <ul data-is_show="sub">
-                                            <li class="main-cat"><a href="/">Футбол<span></span></a></li>
-                                            <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Мячи футбольные<span data-show=".submenu&amp;&amp;ul"></span></a>
-                                              <ul class="submenu">
-                                                <li><a href="/">Щетки футболные</a></li>
-                                                <li><a href="/">Перчатки вратарские</a></li>
-                                                <li><a href="/">Гетры</a></li>
-                                                <li><a href="/">Капитанские повязки</a></li>
-                                                <li><a href="/">Машинки</a></li>
-                                                <li><a href="/">Форма футбольная</a></li>
-                                                <li><a href="/">Обувь</a></li>
-                                              </ul>
-                                            </li>
-                                            <li><a href="/">Мячи футзальные</a></li>
-                                            <li><a href="/">Мячи для пляжного футбола</a></li>
-                                            <li><a href="/">Мячи сувентрные</a></li>
-                                          </ul>
-                                          <ul data-is_show="sub">
-                                            <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Футбольная экипировка<span data-show=".submenu&amp;&amp;ul"></span></a>
-                                              <ul data-is_show="sub">
-                                                <li><a href="/">Щетки футболные</a></li>
-                                                <li><a href="/">Перчатки вратарские</a></li>
-                                                <li><a href="/">Гетры</a></li>
-                                                <li><a href="/">Капитанские повязки</a></li>
-                                                <li><a href="/">Машинки</a></li>
-                                                <li><a href="/">Форма футбольная</a></li>
-                                                <li><a href="/">Обувь</a></li>
-                                              </ul>
-                                            </li>
-                                          </ul>
-                                          <ul data-is_show="sub">
-                                            <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Аксессуары<span data-show=".submenu&amp;&amp;ul"></span></a>
-                                              <ul data-is_show="sub">
-                                                <li><a href="/">Сетки футбольные</a></li>
-                                                <li><a href="/">Сетки и гасители футзальные</a></li>
-                                                <li><a href="/">Тренировачный инвентарь</a></li>
-                                                <li><a href="/">Аксесуры для мечей (насосы иглы и др.)</a></li>
-                                                <li><a href="/">Тележки, сумки/сетки для мячей</a></li>
-                                                <li><a href="/">Судейский инвентарь</a></li>
-                                              </ul>
-                                            </li>
-                                          </ul>
-                                        </div></span></li>
-                                    <li class="submenu " data-is_show="sub"><a href="/">
+                                        <div data-show="all:parent">Спец цены</div><span data-show="all:parent"></span></a>
+                                      <div class="grid-submenu">
+                                        <ul data-is_show="sub">
+                                          <li class="main-cat"><a href="/">Футбол<span></span></a></li>
+                                          <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Мячи футбольные<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul class="submenu">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                          <li><a href="/">Мячи футзальные</a></li>
+                                          <li><a href="/">Мячи для пляжного футбола</a></li>
+                                          <li><a href="/">Мячи сувентрные</a></li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Футбольная экипировка<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Аксессуары<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Сетки футбольные</a></li>
+                                              <li><a href="/">Сетки и гасители футзальные</a></li>
+                                              <li><a href="/">Тренировачный инвентарь</a></li>
+                                              <li><a href="/">Аксесуры для мечей (насосы иглы и др.)</a></li>
+                                              <li><a href="/">Тележки, сумки/сетки для мячей</a></li>
+                                              <li><a href="/">Судейский инвентарь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="submenu " data-is_show="sub"><a href="/" data-show="all:parent">
                                         <div class="icon-box" data-show="all:parent"><img src="assets/img/icon/icon-menu/3-shoes.svg" alt="#"></div>
-                                        <div data-show="all:parent">Обувь</div></a><span data-show="all:parent">
-                                        <div class="grid-submenu">
-                                          <ul data-is_show="sub">
-                                            <li class="main-cat"><a href="/">Футбол<span></span></a></li>
-                                            <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Мячи футбольные<span data-show=".submenu&amp;&amp;ul"></span></a>
-                                              <ul class="submenu">
-                                                <li><a href="/">Щетки футболные</a></li>
-                                                <li><a href="/">Перчатки вратарские</a></li>
-                                                <li><a href="/">Гетры</a></li>
-                                                <li><a href="/">Капитанские повязки</a></li>
-                                                <li><a href="/">Машинки</a></li>
-                                                <li><a href="/">Форма футбольная</a></li>
-                                                <li><a href="/">Обувь</a></li>
-                                              </ul>
-                                            </li>
-                                            <li><a href="/">Мячи футзальные</a></li>
-                                            <li><a href="/">Мячи для пляжного футбола</a></li>
-                                            <li><a href="/">Мячи сувентрные</a></li>
-                                          </ul>
-                                          <ul data-is_show="sub">
-                                            <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Футбольная экипировка<span data-show=".submenu&amp;&amp;ul"></span></a>
-                                              <ul data-is_show="sub">
-                                                <li><a href="/">Щетки футболные</a></li>
-                                                <li><a href="/">Перчатки вратарские</a></li>
-                                                <li><a href="/">Гетры</a></li>
-                                                <li><a href="/">Капитанские повязки</a></li>
-                                                <li><a href="/">Машинки</a></li>
-                                                <li><a href="/">Форма футбольная</a></li>
-                                                <li><a href="/">Обувь</a></li>
-                                              </ul>
-                                            </li>
-                                          </ul>
-                                          <ul data-is_show="sub">
-                                            <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Аксессуары<span data-show=".submenu&amp;&amp;ul"></span></a>
-                                              <ul data-is_show="sub">
-                                                <li><a href="/">Сетки футбольные</a></li>
-                                                <li><a href="/">Сетки и гасители футзальные</a></li>
-                                                <li><a href="/">Тренировачный инвентарь</a></li>
-                                                <li><a href="/">Аксесуры для мечей (насосы иглы и др.)</a></li>
-                                                <li><a href="/">Тележки, сумки/сетки для мячей</a></li>
-                                                <li><a href="/">Судейский инвентарь</a></li>
-                                              </ul>
-                                            </li>
-                                          </ul>
-                                        </div></span></li>
-                                    <li class="submenu " data-is_show="sub"><a href="/">
+                                        <div data-show="all:parent">Обувь</div><span data-show="all:parent"></span></a>
+                                      <div class="grid-submenu">
+                                        <ul data-is_show="sub">
+                                          <li class="main-cat"><a href="/">Футбол<span></span></a></li>
+                                          <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Мячи футбольные<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul class="submenu">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                          <li><a href="/">Мячи футзальные</a></li>
+                                          <li><a href="/">Мячи для пляжного футбола</a></li>
+                                          <li><a href="/">Мячи сувентрные</a></li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Футбольная экипировка<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Аксессуары<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Сетки футбольные</a></li>
+                                              <li><a href="/">Сетки и гасители футзальные</a></li>
+                                              <li><a href="/">Тренировачный инвентарь</a></li>
+                                              <li><a href="/">Аксесуры для мечей (насосы иглы и др.)</a></li>
+                                              <li><a href="/">Тележки, сумки/сетки для мячей</a></li>
+                                              <li><a href="/">Судейский инвентарь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </li>
+                                    <li class="submenu " data-is_show="sub"><a class="active" href="/" data-show="all:parent">
                                         <div class="icon-box" data-show="all:parent"><img src="assets/img/icon/icon-menu/4-futboll.svg" alt="#"></div>
-                                        <div data-show="all:parent">Футбол</div></a><span data-show="all:parent">
-                                        <div class="grid-submenu">
-                                          <ul data-is_show="sub">
-                                            <li class="main-cat"><a href="/">Футбол<span></span></a></li>
-                                            <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Мячи футбольные<span data-show=".submenu&amp;&amp;ul"></span></a>
-                                              <ul class="submenu">
-                                                <li><a href="/">Щетки футболные</a></li>
-                                                <li><a href="/">Перчатки вратарские</a></li>
-                                                <li><a href="/">Гетры</a></li>
-                                                <li><a href="/">Капитанские повязки</a></li>
-                                                <li><a href="/">Машинки</a></li>
-                                                <li><a href="/">Форма футбольная</a></li>
-                                                <li><a href="/">Обувь</a></li>
-                                              </ul>
-                                            </li>
-                                            <li><a href="/">Мячи футзальные</a></li>
-                                            <li><a href="/">Мячи для пляжного футбола</a></li>
-                                            <li><a href="/">Мячи сувентрные</a></li>
-                                          </ul>
-                                          <ul data-is_show="sub">
-                                            <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Футбольная экипировка<span data-show=".submenu&amp;&amp;ul"></span></a>
-                                              <ul data-is_show="sub">
-                                                <li><a href="/">Щетки футболные</a></li>
-                                                <li><a href="/">Перчатки вратарские</a></li>
-                                                <li><a href="/">Гетры</a></li>
-                                                <li><a href="/">Капитанские повязки</a></li>
-                                                <li><a href="/">Машинки</a></li>
-                                                <li><a href="/">Форма футбольная</a></li>
-                                                <li><a href="/">Обувь</a></li>
-                                              </ul>
-                                            </li>
-                                          </ul>
-                                          <ul data-is_show="sub">
-                                            <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Аксессуары<span data-show=".submenu&amp;&amp;ul"></span></a>
-                                              <ul data-is_show="sub">
-                                                <li><a href="/">Сетки футбольные</a></li>
-                                                <li><a href="/">Сетки и гасители футзальные</a></li>
-                                                <li><a href="/">Тренировачный инвентарь</a></li>
-                                                <li><a href="/">Аксесуры для мечей (насосы иглы и др.)</a></li>
-                                                <li><a href="/">Тележки, сумки/сетки для мячей</a></li>
-                                                <li><a href="/">Судейский инвентарь</a></li>
-                                              </ul>
-                                            </li>
-                                          </ul>
-                                        </div></span></li>
+                                        <div data-show="all:parent">Футбол</div><span data-show="all:parent"></span></a>
+                                      <div class="grid-submenu">
+                                        <ul data-is_show="sub">
+                                          <li class="main-cat"><a href="/">Футбол<span></span></a></li>
+                                          <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Мячи футбольные<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul class="submenu">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                          <li><a href="/">Мячи футзальные</a></li>
+                                          <li><a href="/">Мячи для пляжного футбола</a></li>
+                                          <li><a href="/">Мячи сувентрные</a></li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Футбольная экипировка<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Щетки футболные</a></li>
+                                              <li><a href="/">Перчатки вратарские</a></li>
+                                              <li><a href="/">Гетры</a></li>
+                                              <li><a href="/">Капитанские повязки</a></li>
+                                              <li><a href="/">Машинки</a></li>
+                                              <li><a href="/">Форма футбольная</a></li>
+                                              <li><a href="/">Обувь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                        <ul data-is_show="sub">
+                                          <li class="submenu"><a href="/" data-show=".submenu&amp;&amp;ul">Аксессуары<span data-show=".submenu&amp;&amp;ul"></span></a>
+                                            <ul data-is_show="sub">
+                                              <li><a href="/">Сетки футбольные</a></li>
+                                              <li><a href="/">Сетки и гасители футзальные</a></li>
+                                              <li><a href="/">Тренировачный инвентарь</a></li>
+                                              <li><a href="/">Аксесуры для мечей (насосы иглы и др.)</a></li>
+                                              <li><a href="/">Тележки, сумки/сетки для мячей</a></li>
+                                              <li><a href="/">Судейский инвентарь</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </li>
                                     <li class=" "><a href="/">
                                         <div class="icon-box"><img src="assets/img/icon/icon-menu/5-volleyboll.svg" alt="#"></div>
                                         <div>Волейбол</div></a></li>
@@ -374,7 +378,7 @@
       </form>
     </div>
     <!-- Попап загрузок-->
-    <div class="modal-popup" data-close="1" data-popup="popup-load"></div>
+    <!-- div(class=`modal-popup` data-close="1" data-popup="popup-load" )-->
     <main class="page-lk container">
       <div class="top">
         <h1>Мои компании</h1><a class="btn">Добавить компанию</a>
@@ -468,7 +472,7 @@
           </ul>
         </nav>
         <nav class="footer__row-1-nav">
-          <h3>Остовайтесь на связи</h3>
+          <h3>Оставайтесь на связи</h3>
           <ul>
                         <li><a href="#">ООО “БМ-РЕСТАРТ”</a></li>
                         <li><a href="tel:+74951083296">+7 (495) 108-32-96</a></li>

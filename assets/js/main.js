@@ -25,9 +25,14 @@ var Webnn = /*#__PURE__*/function () {
         _this.target = e.target;
         // scroll
         if (_this.target.dataset.scroll) _this.scroll();
+        // if selectActiv
+        var selectActiv = document.querySelector('.select.is-active');
+        if (selectActiv) selectActiv.classList.remove('is-active');
+
         // select
         _this.select_click = _this.target.closest('.select');
         if (_this.select_click && _this.target.tagName !== 'INPUT') _this.select();
+
         // tab
         _this.tab_link = _this.target.closest('*[data-tab_link]');
         if (_this.tab_link) _this.tabs();
@@ -67,6 +72,9 @@ var Webnn = /*#__PURE__*/function () {
   }, {
     key: "select",
     value: function select() {
+      console.log(this.select_click);
+      var selectActiv = document.querySelector('.select.is-active');
+      if (selectActiv) selectActiv.classList.remove('is-active');
       this.select_click.classList.toggle('is-active');
       var select_item = this.target.closest('.select__body-item');
       if (select_item) {
@@ -290,6 +298,44 @@ var Webnn = /*#__PURE__*/function () {
         navigation: {
           nextEl: ".".concat(nameSlider, "-navigation__next"),
           prevEl: ".".concat(nameSlider, "-navigation__prev")
+        },
+        breakpoints: {}
+      });
+      var nameSlider = 'water-season-slider';
+      new Swiper(document.querySelector(".".concat(nameSlider, "__box")), {
+        spaceBetween: 30,
+        // растояние
+        slidesPerView: 4,
+        // кол-во слайдов
+        slideToClickedSlide: true,
+        loop: true,
+        // ативный слайд по центру
+        autoplay: {
+          delay: 1000
+        },
+        speed: 2000,
+        navigation: {
+          nextEl: ".water-season-navigation__next",
+          prevEl: ".water-season-navigation__prev"
+        },
+        breakpoints: {}
+      });
+      var nameSlider = 'recomennded-slider';
+      new Swiper(document.querySelector(".".concat(nameSlider, "__box")), {
+        spaceBetween: 50,
+        // растояние
+        slidesPerView: 5,
+        // кол-во слайдов
+        slideToClickedSlide: true,
+        loop: true,
+        // ативный слайд по центру
+        autoplay: {
+          delay: 1000
+        },
+        speed: 2000,
+        navigation: {
+          nextEl: ".recomennded-season-navigation__next",
+          prevEl: ".recomennded-season-navigation__prev"
         },
         breakpoints: {}
       });
@@ -4694,6 +4740,44 @@ var Form = /*#__PURE__*/function () {
   return Form;
 }();
 new Form();
+var Popup = /*#__PURE__*/function () {
+  function Popup() {
+    var _this3 = this;
+    _classCallCheck(this, Popup);
+    // клик
+    document.addEventListener('click', function (e) {
+      _this3.e = e;
+      _this3.target = e.target;
+      // popup-load
+      _this3.popup = _this3.target.closest('[data-popup-load]');
+      if (_this3.popup) _this3.popupLoad();
+      // close
+      _this3.popupClose = _this3.target.dataset.close;
+      if (_this3.popupClose) _this3.target.classList.remove('show');
+    });
+  }
+  _createClass(Popup, [{
+    key: "popupLoad",
+    value: function popupLoad() {
+      this.e.preventDefault();
+      var popup = document.querySelector('[data-popup="popup-load"]');
+      var loadAttr = this.popup.querySelector('[data-load]');
+      if (!popup) {
+        document.body.insertAdjacentHTML('beforeend', '<div class="modal-popup" data-close="1" data-popup="popup-load"></div>');
+        popup = document.querySelector('[data-popup="popup-load"]');
+      }
+      if (loadAttr) {} else {
+        popup.textContent = '';
+        var data = this.popup;
+        var popapInsert = "\n\t\t\t\t<div class=\"modal-popup__close\" data-show=\"[data-popup='popup-load']\"></div>\n\t            <div class=\"popup-img\">\n\t                <div class=\"popup-img__wrapper\">\n\t                    <div class=\"popup-img__wrapper-img\">\n\t                        ".concat(this.target.outerHTML, "\n\t                    </div>\n\t                </div>\n\t            </div>\n\t\t\t");
+        popup.insertAdjacentHTML('beforeend', popapInsert);
+      }
+      popup.classList.toggle('show');
+    }
+  }]);
+  return Popup;
+}();
+new Popup();
 document.addEventListener('click', function (e) {
   var element = e.target;
 
@@ -4786,16 +4870,27 @@ document.addEventListener('click', function (e) {
     var elementShow = document.querySelector(dataShow);
 
     // если модальное окно загрузки
-    if (dataShow === "[data-popup='popup-load']") {
-      var load = clickedElement.querySelector('[data-load]');
-      if (load) {
-        load = load.dataset.load;
-        elementShow.textContent = '';
-        var popapInsert = "\n\t\t\t\t\t<div class=\"modal-popup__close\" data-show=\"[data-popup='popup-load']\"></div>\n\t                <div class=\"popup-img\">\n\t                \t<div class=\"popup-img__wrapper\">\n\t                \t\t<div class=\"popup-img__wrapper-img\">\n\t                \t\t\t".concat(load, "\n\t                \t\t</div>\n\t                \t</div>\n\t                </div>\t\n\t\t\t\t");
-        elementShow.insertAdjacentHTML('beforeend', popapInsert);
-      }
-    }
-    elementShow.classList.toggle('show');
+    // if(dataShow === "[data-popup='popup-load']") {
+    // 	let load = clickedElement.querySelector('[data-load]')
+    // 	if(load) {
+    // 		load = load.dataset.load
+    // 		elementShow.textContent = ''
+    // 		let popapInsert  = `
+    // 			<div class="modal-popup__close" data-show="[data-popup='popup-load']"></div>
+    //             <div class="popup-img">
+    //             	<div class="popup-img__wrapper">
+    //             		<div class="popup-img__wrapper-img">
+    //             			${load}
+    //             		</div>
+    //             	</div>
+    //             </div>
+    // 		`
+    //
+    // 		elementShow.insertAdjacentHTML('beforeend', popapInsert)
+    // 	}
+    // }
+
+    // elementShow.classList.toggle('show')
   }
 
   // Удалени классв show
@@ -4890,7 +4985,7 @@ if (gal) {
     },
     computed: {
       evenItems: function evenItems() {
-        var _this3 = this;
+        var _this4 = this;
         var gal = document.querySelector('.gallery-slider__small-img');
         var items = gal.querySelectorAll('.el');
         gal.remove();
@@ -4901,7 +4996,7 @@ if (gal) {
             small: img.src,
             large: img.dataset.large
           };
-          _this3.items.push(obj);
+          _this4.items.push(obj);
         });
         this.img_large = this.items[0].large;
         return this.items;
