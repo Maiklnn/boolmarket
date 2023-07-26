@@ -51,7 +51,7 @@ var Webnn = /*#__PURE__*/function () {
       window.onscroll = function () {
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         scrollTop > 300 ? scrollBtn.classList.add("scrollToTop--show") : scrollBtn.classList.remove("scrollToTop--show");
-        if (header) scrollTop > 10 ? header.classList.add("header--fixed") : header.classList.remove("header--fixed");
+        if (header) scrollTop > 1000 ? header.classList.add("header--fixed") : header.classList.remove("header--fixed");
       };
 
       // прокрутка к элементу
@@ -256,15 +256,11 @@ var Webnn = /*#__PURE__*/function () {
       var nameSlider = 'main-slider';
       new Swiper(document.querySelector(".".concat(nameSlider, "__box")), {
         spaceBetween: 30,
-        // растояние
-        //	slidesPerView: 4,// кол-во слайдов
         slideToClickedSlide: true,
-        // loop: true,
-        // centeredSlides: true, // ативный слайд по центру
-        // autoplay: {
-        // 	delay: 1000
-        // },
         speed: 2000,
+        autoplay: {
+          delay: 5000
+        },
         navigation: {
           nextEl: ".".concat(nameSlider, "-navigation__next"),
           prevEl: ".".concat(nameSlider, "-navigation__prev")
@@ -291,9 +287,6 @@ var Webnn = /*#__PURE__*/function () {
         loop: true,
         centeredSlides: true,
         // ативный слайд по центру
-        autoplay: {
-          delay: 1000
-        },
         speed: 2000,
         navigation: {
           nextEl: ".".concat(nameSlider, "-navigation__next"),
@@ -310,9 +303,6 @@ var Webnn = /*#__PURE__*/function () {
         slideToClickedSlide: true,
         loop: true,
         // ативный слайд по центру
-        autoplay: {
-          delay: 1000
-        },
         speed: 2000,
         navigation: {
           nextEl: ".water-season-navigation__next",
@@ -329,9 +319,6 @@ var Webnn = /*#__PURE__*/function () {
         slideToClickedSlide: true,
         loop: true,
         // ативный слайд по центру
-        autoplay: {
-          delay: 1000
-        },
         speed: 2000,
         navigation: {
           nextEl: ".recomennded-season-navigation__next",
@@ -4808,6 +4795,9 @@ var Popup = /*#__PURE__*/function () {
       // popup-load
       _this3.popup = _this3.target.closest('[data-popup-load]');
       if (_this3.popup) _this3.popupLoad();
+      // popup-parent
+      _this3.popup = _this3.target.closest('[data-popup-parent]');
+      if (_this3.popup) _this3.popupParent();
       // close
       _this3.popupClose = _this3.target.dataset.close;
       if (_this3.popupClose) _this3.target.classList.remove('show');
@@ -4831,9 +4821,15 @@ var Popup = /*#__PURE__*/function () {
       }
       popup.classList.toggle('show');
     }
+  }, {
+    key: "popupParent",
+    value: function popupParent() {
+      this.popup.classList.toggle('show');
+    }
   }]);
   return Popup;
-}(); // new Popup();
+}();
+new Popup();
 document.addEventListener('click', function (e) {
   var element = e.target;
 
