@@ -83,7 +83,7 @@ var Webnn = /*#__PURE__*/function () {
         var data = selText.split('-');
         if (data[1]) selText = data[0];
         selectHeader.textContent = selText;
-        if (data[1]) selectHeader.insertAdjacentHTML('afterBegin', "<span>".concat(data[1], "</span>"));
+        if (data[1]) selectHeader.insertAdjacentHTML('afterBegin', "<span class = 'select__header-caption'>".concat(data[1], "</span>"));
       }
     }
   }, {
