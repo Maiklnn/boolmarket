@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 html {
   box-sizing: border-box;
 }
@@ -350,6 +352,32 @@ html .container {
   height: 100vh;
   width: 100%;
 }
+
+/* Приимеры
+
+--------------------------------select
+
+div(class="select")
+	div(class="select__header") Любое
+
+	div(class="select__body")
+		mixin item-sel(name, active)
+			label(class=`select__body-item ${active}`)
+				span= name
+				input(type="radio" id="one" name="select")
+
+		+item-sel('Любое', '')
+		+item-sel('1', '')
+		+item-sel('2', '')
+		+item-sel('3', '')
+
+-------------------------------- checkbox
+
+label.checkbox
+	input(type=`checkbox` name="" )
+	span Подпись
+
+*/
 
 h2 {
   font-size: 40px;
@@ -1258,6 +1286,145 @@ h3 {
 .slider-logo-slide {
   display: flex;
   justify-content: center;
+}
+
+.form-edit-company {
+  margin-bottom: 80px;
+  max-width: 1120px;
+  width: 100%;
+  padding: 18px 18px 30px 18px;
+  color: #666;
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 278px);
+  -moz-column-gap: 62px;
+  column-gap: 62px;
+  row-gap: 10px;
+  border-radius: 15px;
+  border: 1px solid #EAEAEA;
+  background: #F4F4F4;
+}
+
+.form-edit-company .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-edit-company .form-field__caption {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.8571428571;
+}
+
+.form-edit-company .form-field .placeholder-container ::-webkit-input-placeholder {
+  color: #333;
+}
+
+.form-edit-company .form-field .placeholder-container.texarea {
+  grid-column: span 3;
+  height: 85px;
+}
+
+.form-edit-company .form-field .placeholder-container input {
+  height: 40px;
+  border: 1px solid #EAEAEA;
+}
+
+.form-edit-company .form-field .placeholder-container input:not(:-moz-placeholder-shown) + .caption {
+  transform: translate(0, 3px);
+  background-color: transparent;
+  color: #666;
+}
+
+.form-edit-company .form-field .placeholder-container input:focus + .caption,
+.form-edit-company .form-field .placeholder-container input:not(:placeholder-shown) + .caption {
+  transform: translate(0, 3px);
+  background-color: transparent;
+  color: #666;
+}
+
+.form-edit-company .form-field .select {
+  width: 100%;
+}
+
+.form-edit-company .form-field .select__header {
+  border-radius: 5px;
+  border: 1px solid #EAEAEA;
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 17px;
+}
+
+.form-edit-company .form-field .select__header::after {
+  min-width: 17px;
+  height: 9px;
+  background: url(../img/icon/arr/arr-select-large.svg);
+  content: "";
+}
+
+.form-edit-company .form-field .select__body {
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  border: none;
+  border-top: 1px solid #EAEAEA;
+  border-radius: 0;
+}
+
+.form-edit-company .form-field .select__body input {
+  border: none;
+}
+
+.form-edit-company .form-field .checkbox {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.1666666667;
+}
+
+.form-edit-company .form-field .checkbox input:checked + span:before {
+  background: url("../img/icon/arr/lk _check_.svg") no-repeat center center;
+  background-color: #fff;
+}
+
+.form-edit-company .form-field .checkbox span {
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-edit-company .form-field .checkbox span:before {
+  border-radius: 3px;
+  border: 1px solid #CDCDCD;
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  content: "";
+}
+
+.form-edit-company__btns {
+  margin-top: 66px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-edit-company__btns .btn {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8571428571;
+  min-width: 120px;
+}
+
+.form-edit-company__btns .btn:nth-child(1) {
+  background: #CDCDCD;
 }
 
 .tab__link:hover {
@@ -3933,6 +4100,10 @@ h3 {
   row-gap: 51px;
 }
 
+.landing .form-landing-form .placeholder-container ::-webkit-input-placeholder {
+  color: #333;
+}
+
 .landing .form-landing-form .placeholder-container.texarea {
   grid-column: span 3;
   height: 85px;
@@ -3945,12 +4116,14 @@ h3 {
 .landing .form-landing-form .placeholder-container input:not(:-moz-placeholder-shown) + .caption {
   transform: translate(0, 3px);
   background-color: transparent;
+  color: #666;
 }
 
 .landing .form-landing-form .placeholder-container input:focus + .caption,
 .landing .form-landing-form .placeholder-container input:not(:placeholder-shown) + .caption {
   transform: translate(0, 3px);
   background-color: transparent;
+  color: #666;
 }
 
 .landing .form-landing-form .captcha {
@@ -3973,6 +4146,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   min-height: 82px;
+  margin-bottom: 30px;
   position: relative;
 }
 
@@ -4112,5 +4286,13 @@ h3 {
   width: 23px;
   height: 23px;
   background: url("../img/icon/del-lk.svg") no-repeat;
+}
+
+.page-lk--company .top {
+  margin-bottom: 0;
+}
+
+.page-lk--order .top:before {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
