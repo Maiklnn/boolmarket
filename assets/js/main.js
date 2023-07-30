@@ -4824,6 +4824,16 @@ var Popup = /*#__PURE__*/function () {
   }, {
     key: "popupParent",
     value: function popupParent() {
+      var word = this.popup.dataset.word;
+      if (word) {
+        this.popup.setAttribute('data-word', this.popup.textContent);
+        this.popup.textContent = word;
+      }
+      if (this.popup.dataset.popupParent !== 1) {
+        this.parent = this.popup.closest(this.popup.dataset.popupParent);
+        this.parent.classList.toggle('show');
+        return;
+      }
       this.popup.classList.toggle('show');
     }
   }]);
