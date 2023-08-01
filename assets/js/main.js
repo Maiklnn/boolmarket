@@ -25,13 +25,14 @@ var Webnn = /*#__PURE__*/function () {
         _this.target = e.target;
         // scroll
         if (_this.target.dataset.scroll) _this.scroll();
-        // if selectActiv
-        var selectActiv = document.querySelector('.select.is-active');
-        if (selectActiv) selectActiv.classList.remove('is-active');
 
         // select
         _this.select_click = _this.target.closest('.select');
         if (_this.select_click && _this.target.tagName !== 'INPUT') _this.select();
+
+        // if selectActiv
+        var selectActiv = document.querySelector('.select.is-active');
+        if (selectActiv) selectActiv.classList.remove('is-active');
 
         // tab
         _this.tab_link = _this.target.closest('*[data-tab_link]');
@@ -72,10 +73,15 @@ var Webnn = /*#__PURE__*/function () {
   }, {
     key: "select",
     value: function select() {
-      console.log(this.select_click);
+      // console.log(this.select_click);
+
+      if (this.select_click.classList.contains('is-active') && this.select_click.classList.contains('select--catalog')) {
+        console.log(this.select_click);
+        return;
+      }
       var selectActiv = document.querySelector('.select.is-active');
       if (selectActiv) selectActiv.classList.remove('is-active');
-      this.select_click.classList.toggle('is-active');
+      this.select_click.classList.add('is-active');
       var select_item = this.target.closest('.select__body-item');
       if (select_item) {
         var selectHeader = this.select_click.querySelector('.select__header');
@@ -259,7 +265,7 @@ var Webnn = /*#__PURE__*/function () {
         slideToClickedSlide: true,
         speed: 2000,
         autoplay: {
-          delay: 5000
+          delay: 1000
         },
         navigation: {
           nextEl: ".".concat(nameSlider, "-navigation__next"),
@@ -287,7 +293,7 @@ var Webnn = /*#__PURE__*/function () {
         loop: true,
         centeredSlides: true,
         // ативный слайд по центру
-        speed: 2000,
+        speed: 500,
         navigation: {
           nextEl: ".".concat(nameSlider, "-navigation__next"),
           prevEl: ".".concat(nameSlider, "-navigation__prev")
@@ -303,7 +309,7 @@ var Webnn = /*#__PURE__*/function () {
         slideToClickedSlide: true,
         loop: true,
         // ативный слайд по центру
-        speed: 2000,
+        speed: 500,
         navigation: {
           nextEl: ".water-season-navigation__next",
           prevEl: ".water-season-navigation__prev"
@@ -319,7 +325,7 @@ var Webnn = /*#__PURE__*/function () {
         slideToClickedSlide: true,
         loop: true,
         // ативный слайд по центру
-        speed: 2000,
+        speed: 500,
         navigation: {
           nextEl: ".recomennded-season-navigation__next",
           prevEl: ".recomennded-season-navigation__prev"
@@ -339,7 +345,7 @@ var Webnn = /*#__PURE__*/function () {
         autoplay: {
           delay: 1000
         },
-        speed: 2000,
+        speed: 500,
         navigation: {
           nextEl: ".".concat(nameSlider, "-navigation__next"),
           prevEl: ".".concat(nameSlider, "-navigation__prev")
@@ -357,7 +363,7 @@ var Webnn = /*#__PURE__*/function () {
           autoplay: {
             delay: 1000
           },
-          speed: 2000,
+          speed: 500,
           slideToClickedSlide: true,
           loop: true,
           navigation: {
