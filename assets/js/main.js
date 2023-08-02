@@ -28,11 +28,8 @@ var Webnn = /*#__PURE__*/function () {
 
         // select
         _this.select_click = _this.target.closest('.select');
-        if (_this.select_click && _this.target.tagName !== 'INPUT') _this.select();
-
-        // if selectActiv
-        var selectActiv = document.querySelector('.select.is-active');
-        if (selectActiv) selectActiv.classList.remove('is-active');
+        _this.selectActiv = document.querySelector('.select.is-active');
+        if (_this.select_click && _this.target.tagName !== 'INPUT' || _this.selectActiv) _this.select();
 
         // tab
         _this.tab_link = _this.target.closest('*[data-tab_link]');
@@ -73,23 +70,56 @@ var Webnn = /*#__PURE__*/function () {
   }, {
     key: "select",
     value: function select() {
-      // console.log(this.select_click);
-
-      if (this.select_click.classList.contains('is-active') && this.select_click.classList.contains('select--catalog')) {
-        console.log(this.select_click);
-        return;
+      // закрытие селекта
+      if (this.selectActiv) {
+        if (!this.select_click) {
+          this.selectActiv.classList.remove('is-active');
+          return;
+        }
+        if (this.target.parentNode.classList.contains('is-active')) {
+          this.target.parentNode.classList.remove('is-active');
+          return;
+        }
       }
-      var selectActiv = document.querySelector('.select.is-active');
-      if (selectActiv) selectActiv.classList.remove('is-active');
-      this.select_click.classList.add('is-active');
-      var select_item = this.target.closest('.select__body-item');
-      if (select_item) {
-        var selectHeader = this.select_click.querySelector('.select__header');
-        var selText = select_item.textContent;
-        var data = selText.split('-');
-        if (data[1]) selText = data[0];
-        selectHeader.textContent = selText;
-        if (data[1]) selectHeader.insertAdjacentHTML('afterBegin', "<span class = 'select__header-caption'>".concat(data[1], "</span>"));
+
+      // клик по select
+      if (this.select_click && this.target.tagName !== 'INPUT') {
+        if (this.target.classList.contains('select__header')) {
+          var selectActiv = document.querySelector('.select.is-active');
+          if (selectActiv) selectActiv.classList.remove('is-active');
+          this.select_click.classList.toggle('is-active');
+        }
+        var select_item = this.target.closest('.select__body-item');
+        if (select_item) {
+          var filter = this.select_click.closest('.filter-catalog');
+          var selectHeader = this.select_click.querySelector('.select__header');
+          var selText = select_item.textContent;
+
+          // select в каталоге
+          if (this.select_click.classList.contains('select--catalog')) {
+            select_item.classList.toggle('selected');
+            var selected = filter.querySelectorAll('.selected');
+            var str = '';
+            if (selected.length < 3) {
+              selected.forEach(function (item) {
+                str += "<li class = 'sel'>".concat(item.textContent, "</li>");
+              });
+              if (!str) str = 'Любой';
+              selectHeader.textContent = '';
+              selectHeader.insertAdjacentHTML('afterBegin', "<ul>".concat(str, "</ul>"));
+            } else {
+              selectHeader.textContent = '';
+              var h3 = filter.querySelector('h3').textContent;
+              selectHeader.insertAdjacentHTML('afterBegin', "<ul>".concat(h3, " ").concat(selected.length, "</ul>"));
+            }
+            return;
+          }
+          this.select_click.classList.remove('is-active');
+          var data = selText.split('-');
+          if (data[1]) selText = data[0];
+          selectHeader.textContent = selText;
+          if (data[1]) selectHeader.insertAdjacentHTML('afterBegin', "<span class = 'select__header-caption'>".concat(data[1], "</span>"));
+        }
       }
     }
   }, {
@@ -263,9 +293,9 @@ var Webnn = /*#__PURE__*/function () {
       new Swiper(document.querySelector(".".concat(nameSlider, "__box")), {
         spaceBetween: 30,
         slideToClickedSlide: true,
-        speed: 2000,
+        speed: 500,
         autoplay: {
-          delay: 1000
+          delay: 7000
         },
         navigation: {
           nextEl: ".".concat(nameSlider, "-navigation__next"),
@@ -291,7 +321,7 @@ var Webnn = /*#__PURE__*/function () {
         // кол-во слайдов
         slideToClickedSlide: true,
         loop: true,
-        centeredSlides: true,
+        // centeredSlides: true,
         // ативный слайд по центру
         speed: 500,
         navigation: {
