@@ -47,9 +47,16 @@ var Webnn = /*#__PURE__*/function () {
       // header
       var header = document.querySelector('.header');
       window.onscroll = function () {
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        scrollTop > 300 ? scrollBtn.classList.add("scrollToTop--show") : scrollBtn.classList.remove("scrollToTop--show");
-        if (header) scrollTop > 1000 ? header.classList.add("header--fixed") : header.classList.remove("header--fixed");
+        if (header && !header.parentElement.classList.contains('landing')) {
+          var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+          scrollTop > 300 ? scrollBtn.classList.add("scrollToTop--show") : scrollBtn.classList.remove("scrollToTop--show");
+          if (header) scrollTop > 100 ? header.classList.add("header--fixed") : header.classList.remove("header--fixed");
+        } else {
+          header = document.querySelector('.header-landing');
+          var _scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+          _scrollTop > 300 ? scrollBtn.classList.add("scrollToTop--show") : scrollBtn.classList.remove("scrollToTop--show");
+          if (header) _scrollTop > 300 ? header.classList.add("header--fixed") : header.classList.remove("header--fixed");
+        }
       };
 
       // прокрутка к элементу
@@ -61,10 +68,12 @@ var Webnn = /*#__PURE__*/function () {
         */
         var scrollElem = this.target.dataset.scroll.split('--');
         var scrollBlock = document.querySelector("".concat(scrollElem[0])); // получаем блок до которого скролим
-        scrollBlock.scrollIntoView({
-          behavior: 'smooth',
-          block: scrollElem[1]
-        });
+        // scrollBlock.scrollIntoView({
+        // 	behavior: 'smooth',
+        // 	block: scrollElem[1]
+        // })
+        console.log(scrollBlock);
+        scrollBlock.scrollTo(0, 100);
       } else {}
     }
   }, {
@@ -372,9 +381,6 @@ var Webnn = /*#__PURE__*/function () {
         loop: true,
         centeredSlides: true,
         // ативный слайд по центру
-        autoplay: {
-          delay: 1000
-        },
         speed: 500,
         navigation: {
           nextEl: ".".concat(nameSlider, "-navigation__next"),
@@ -4895,12 +4901,45 @@ document.addEventListener('click', function (e) {
   var select_view_row = element.classList.contains('top-bar__select-view__row');
   if (select_view_column || select_view_row) {
     e.preventDefault();
+    var toggleProducts = function toggleProducts(toggle) {
+      var products = list.querySelectorAll('.item-product-line');
+      products.forEach(function (item) {
+        var favorite = item.querySelector('.item-product-line__descr-box__stock-box__favorites');
+        favorite.remove();
+        var bar = item.querySelector('.item-product-line__descr-box__stock-box__bar');
+        bar.remove();
+        var stockBox = item.querySelector('.item-product-line__descr-box__stock-box');
+        stockBox.remove();
+        var btnCart = item.querySelector('.btn');
+        var cart = item.querySelector('.item-product-line__spec-box__quan-box');
+        if (toggle === 'column') {
+          cart.insertAdjacentHTML('beforebegin', stockBox.outerHTML);
+          cart.insertAdjacentHTML('beforeend', favorite.outerHTML);
+          cart.insertAdjacentHTML('beforeend', bar.outerHTML);
+          btnCart.textContent = '';
+        }
+        if (toggle === 'line') {
+          var descrBox = item.querySelector('.item-product-line__descr-box');
+          descrBox.insertAdjacentHTML('beforeend', stockBox.outerHTML);
+          stockBox = item.querySelector('.item-product-line__descr-box__stock-box');
+          stockBox.insertAdjacentHTML('beforeend', favorite.outerHTML);
+          stockBox.insertAdjacentHTML('beforeend', bar.outerHTML);
+          btnCart.textContent = 'Корзина';
+        }
+      });
+    };
     var list = document.querySelector('.page-catalog-list');
+
+    // продукты в лист
     if (select_view_row && list.classList.contains('product-list--column')) {
       list.classList.remove('product-list--column');
+      toggleProducts('line');
     }
+
+    // продукты в столбик
     if (select_view_column && !list.classList.contains('product-list--column')) {
       list.classList.add('product-list--column');
+      toggleProducts('column');
     }
   }
 });

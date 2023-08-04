@@ -11,14 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@700&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Rubik:ital,wght@0,300;0,500;0,700;1,300;1,700&display=swap" rel="stylesheet">
   </head>
   <body class="landing">
-    <header class="header">
-      <div class="row-top  container">
-        <div class="logo-box"><a class="logo" href="/"><img src="assets/img/landing/logo.svg" alt="#"></a>
-          <div class="logo-box__text">Оптовая продажа <br>спортивного инвентаря <span>Работаем с 2008 года</span></div>
+    <div class="header">
+      <header class="header-landing">
+        <div class="row-top  container">
+          <div class="logo-box"><a class="logo" href="/"><img src="assets/img/landing/logo.svg" alt="#"></a>
+            <div class="logo-box__text">Оптовая продажа <br>спортивного инвентаря <span>Работаем с 2008 года</span></div>
+          </div>
+          <div class="row-top__phone-box"><a class="phone" href="tel:+74951083296">+7 (495) 108-32-96</a><span data-show="[data-popup='lend-popup']">Перезвоните мне</span></div>
+          <div class="row-top__user-box"><a class="btn" href="" data-scroll=".form-landing">Заявка на регистрацию</a><a class="row-top__user-box__start" href="/">Войти в личный кабинет</a></div>
         </div>
-        <div class="row-top__phone-box"><a class="phone" href="tel:+74951083296">+7 (495) 108-32-96</a><span data-show="[data-popup='lend-popup']">Перезвоните мне</span></div>
-        <div class="row-top__user-box"><a class="btn" href="" data-scroll=".form-landing">Заявка на регистрацию</a><a class="row-top__user-box__start" href="/">Войти в личный кабинет</a></div>
-      </div>
+      </header>
       <div class="body  container">
         <h1>Спортивные мячи, аксессуары, обувь и многое другое оптом, напрямую с нашего склада</h1>
         <div class="body__list">
@@ -37,14 +39,12 @@
             <div class="item__qty" data-counterAuto="start=1600:end=2008:step=1:time=500">2008</div>
             <div class="item__qty-caption">Года</div>
           </div>
-          <!--+item('Более', '40', 'Брендов')-->
-          <!--+item('В ассортименте', '21', 'Категория')-->
-          <!--+item('На рынке с', '2008', 'Года')-->
-        </div><a class="body__detail" href="/" data-scroll=".who-we">Узнать подробнее</a>
+        </div><a class="body__detail" href="/" data-scroll=".who-we__scroll">Узнать подробнее</a>
       </div>
-    </header>
+    </div>
     <main>
-      <section class="who-we  container"><a name="who_we"></a>
+      <section class="who-we  container">
+        <div class="who-we__scroll">23</div>
         <h2>Почему мы?</h2>
         <p> Оптовые продажи для нас основной бизнес, идея которого проста и изящна: предоставить возможность выгодно закупать мячи, спортивное оборудование и аксессуары в одном месте, экономя время, нервы и зарабатывая при этом больше денег.</p>
         <div class="exclusive">
@@ -106,12 +106,120 @@
           <h3>И еще более 40 брендов</h3>
           <div class="slider__box swiper-container">
             <div class="swiper-wrapper">
-                            <div class="slider-logo-slide swiper-slide"><img src="assets/img/landing/distr/oficial/1.jpg" alt="#"></div>
-                            <div class="slider-logo-slide swiper-slide"><img src="assets/img/landing/distr/oficial/3.jpg" alt="#"></div>
-                            <div class="slider-logo-slide swiper-slide"><img src="assets/img/landing/distr/oficial/4.jpg" alt="#"></div>
-                            <div class="slider-logo-slide swiper-slide"><img src="assets/img/landing/distr/oficial/5.jpg" alt="#"></div>
-                            <div class="slider-logo-slide swiper-slide"><img src="assets/img/landing/distr/oficial/adidas.svg" alt="#"></div>
-                            <div class="slider-logo-slide swiper-slide"><img src="assets/img/landing/distr/oficial/nike.svg" alt="#"></div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/1.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/3.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/4.png" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/5.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/6.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/7.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/8.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/9.png" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/10.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/11.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/12.png" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/13.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/14.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/15.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/16.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/17.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/18.png" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/19.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/20.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/21.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/22.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/23.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/24.png" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/25.png" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/26.png" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/27.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/28.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/29.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/30.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/31.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/32.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/33.png" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/34.png" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/35.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/36.jpg" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/37.png" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/38.png" alt="#"></div>
+                            </div>
+                            <div class="slider-logo-slide swiper-slide">
+                              <div class="slider-logo-slide__img-box"><img src="assets/img/landing/distr/oficial/39.jpg" alt="#"></div>
+                            </div>
             </div>
           </div>
         </section>
