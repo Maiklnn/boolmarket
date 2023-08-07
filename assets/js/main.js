@@ -68,13 +68,30 @@ var Webnn = /*#__PURE__*/function () {
         */
         var scrollElem = this.target.dataset.scroll.split('--');
         var scrollBlock = document.querySelector("".concat(scrollElem[0])); // получаем блок до которого скролим
-        // scrollBlock.scrollIntoView({
-        // 	behavior: 'smooth',
-        // 	block: scrollElem[1]
-        // })
+        scrollBlock.scrollIntoView({
+          behavior: 'smooth',
+          block: scrollElem[1]
+        });
         console.log(scrollBlock);
-        scrollBlock.scrollTo(0, 100);
-      } else {}
+        if (scrollBlock.classList.contains('tab__nav')) {
+          var tabLinks = document.querySelectorAll('[data-tab_link]');
+          var tabContent = document.querySelectorAll('[data-tab_content]');
+          tabLinks.forEach(function (item) {
+            if (item.dataset.tab_link === "2") {
+              item.classList.add('tab__link--active');
+            } else {
+              item.classList.remove('tab__link--active');
+            }
+          });
+          tabContent.forEach(function (item) {
+            if (item.dataset.tab_content === "2") {
+              item.classList.add('tab__content-item--active');
+            } else {
+              item.classList.remove('tab__content-item--active');
+            }
+          });
+        }
+      }
     }
   }, {
     key: "select",
@@ -100,6 +117,10 @@ var Webnn = /*#__PURE__*/function () {
         }
         var select_item = this.target.closest('.select__body-item');
         if (select_item) {
+          if (this.select_click.classList.contains('select--order')) {
+            select_item.classList.toggle('selected');
+            return;
+          }
           var filter = this.select_click.closest('.filter-catalog');
           var selectHeader = this.select_click.querySelector('.select__header');
           var selText = select_item.textContent;
@@ -4891,8 +4912,11 @@ document.addEventListener('click', function (e) {
     var tab__left = checkbox.closest('.page-basket-tab__left');
     var checkeds = tab__left.querySelectorAll('.item-product-line input[type="checkbox"]');
     checkeds.forEach(function (item, i) {
-      item.setAttribute('checked', '1');
-      console.log(i);
+      if (item.getAttribute('checked')) {
+        item.removeAttribute('checked');
+      } else {
+        item.setAttribute('checked', '1');
+      }
     });
   }
 
