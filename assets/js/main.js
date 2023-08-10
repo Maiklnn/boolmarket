@@ -381,10 +381,9 @@ var Webnn = /*#__PURE__*/function () {
         spaceBetween: 50,
         // растояние
         slidesPerView: 5,
+        slideToClickedSlide: false,
         // кол-во слайдов
-        slideToClickedSlide: true,
         loop: true,
-        // ативный слайд по центру
         speed: 500,
         navigation: {
           nextEl: ".recomennded-season-navigation__next",
@@ -400,7 +399,7 @@ var Webnn = /*#__PURE__*/function () {
         // кол-во слайдов
         slideToClickedSlide: true,
         loop: true,
-        centeredSlides: true,
+        // centeredSlides: true,
         // ативный слайд по центру
         speed: 500,
         navigation: {
