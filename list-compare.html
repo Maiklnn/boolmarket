@@ -5,7 +5,7 @@
     <!-- meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no')-->
     <meta name="description">
     <meta name="keywords" content="">
-    <title>Ballmarket мои заказы</title>
+    <title>Ballmarket списки сравненния</title>
     <link rel="stylesheet" href="assets/css/main.css?v=undefined"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@700&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Rubik:ital,wght@0,300;0,500;0,700;1,300;1,700&display=swap" rel="stylesheet">
@@ -365,7 +365,7 @@
     <!-- div(class=`modal-popup` data-close="1" data-popup="popup-load" )-->
     <main class="page-lk page-lk--order container">
       <div class="top">
-        <h1>Мои заказы</h1>
+        <h1>Списки сравнения</h1>
       </div>
       <div class="body">
         <div class="body__aside">
@@ -391,29 +391,18 @@
           </nav>
         </div>
         <div class="body__main">
-          <form class="form-my-order">
-            <div class="form-field"><span class="form-field__caption">По номеру заказа</span>
-              <div class="placeholder-container">
-                <input type="text" name="#" placeholder="Введите номер" required>
-              </div>
-            </div>
-            <div class="form-field form"><span class="form-field__caption">Дата заказа</span>
-              <div class="placeholder-container placeholder-container--date">
-                <input type="text" name="#" data-mask="date" placeholder="__.__.__" required>
-                <input type="text" name="#" data-mask="date" placeholder="__.__.__" required>
-              </div>
-            </div>
-            <div class="form-field"><span class="form-field__caption">Категории в заказе</span>
+          <form class="form-compare">
+            <div class="form-field"><span class="form-field__caption">Категория товара</span>
               <div class="select select--order">
-                <div class="select__header">Все</div>
+                <div class="select__header">Спортивная медицина</div>
                 <div class="select__body">
-                                    <label class="select__body-item "><span>Все</span>
-                                      <input type="radio" id="one" name="select">
-                                    </label>
                                     <label class="select__body-item "><span>Футбол</span>
                                       <input type="radio" id="one" name="select">
                                     </label>
                                     <label class="select__body-item "><span>Хоккей</span>
+                                      <input type="radio" id="one" name="select">
+                                    </label>
+                                    <label class="select__body-item selected"><span>Спортивная медицина</span>
                                       <input type="radio" id="one" name="select">
                                     </label>
                                     <label class="select__body-item "><span>Воллейбол</span>
@@ -452,105 +441,16 @@
                                     <label class="select__body-item "><span>Сетки спортивные</span>
                                       <input type="radio" id="one" name="select">
                                     </label>
-                                    <label class="select__body-item "><span>Спортивная медицина</span>
-                                      <input type="radio" id="one" name="select">
-                                    </label>
                                     <label class="select__body-item "><span>Фитнес</span>
                                       <input type="radio" id="one" name="select">
                                     </label>
                 </div>
               </div>
             </div>
-            <div class="form-my-order__btns">
-              <button class="btn">Применить</button>
-              <button class="btn">Сбросить</button>
+            <div class="form-compare__btns">
+              <button class="btn">Показать</button>
             </div>
           </form>
-          <section class="lk-field">
-            <div class="lk-field__body">
-              <div class="lk-field__body-order">Заказ <strong>#256198</strong><br>от 21.06.23г</div>
-              <div class="lk-field__body-weight">Вес 20 кг<br> Объём 1.2 м2</div>
-              <div class="lk-field__body-categories-name">Категории</div>
-              <div class="lk-field__body-categories">
-                <div class="lk-field__body-categories-item" style="background-color: #28BE37; color: #fff">Футбол</div>
-                <div class="lk-field__body-categories-item" style="background-color: #FFB444;">Баскетбол</div>
-                <div class="lk-field__body-categories-item" style="background-color: #FFCB00;">Волейбол</div>
-                <div class="lk-field__body-categories-item hide" style="background-color: #FFCB00;">Водное поло</div>
-                <div class="lk-field__body-categories-item hide" style="background-color: #FFCB00;">Гандбол</div>
-                <div class="lk-field__body-categories-item hide" style="background-color: #FFCB00;">Волейбол</div>
-                <div class="lk-field__body-categories-item hide" style="background-color: #FFCB00;">Водное поло</div>
-                <div class="lk-field__body-categories-item hide" style="background-color: #FFCB00;">Водное поло</div>
-                <div class="lk-field__body-categories-item link" data-popup-parent=".lk-field__body-categories" data-word="скрыть">ещё 5</div>
-              </div><a class="lk-field__body-link" href="">Повторить заказ</a>
-            </div>
-            <div class="lk-field__result">
-              <p class="lk-field__result-total"><strong>Всего товаров: 35</strong></p>
-              <div class="lk-field__body-link" data-popup-parent=".lk-field" data-word="Скрыть список товаров">Показать список товаров</div>
-              <p class="lk-field__result-result">Счет выставлен по колонке <strong>опт 3,</strong> на сумму: <strong>200 000</strong></p>
-            </div>
-            <div class="lk-field-table">
-              <div class="lk-field-table__title">
-                <div class="th">#</div>
-                <div class="th">Наменование</div>
-                <div class="th">Кол-во</div>
-                <div class="th">Цена</div>
-                <div class="th">Итого</div>
-              </div>
-              <div class="lk-field-table__item">
-                <div class="th">1</div>
-                <div class="th">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
-                <div class="th">42</div>
-                <div class="th">1 053 P</div>
-                <div class="th">44 226 P</div>
-              </div>
-              <div class="lk-field-table__item">
-                <div class="th">1</div>
-                <div class="th">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
-                <div class="th">42</div>
-                <div class="th">1 053 P</div>
-                <div class="th">44 226 P</div>
-              </div>
-            </div>
-          </section>
-          <section class="lk-field">
-            <div class="lk-field__body">
-              <div class="lk-field__body-order">Заказ <strong>#256198</strong><br>от 21.06.23г</div>
-              <div class="lk-field__body-weight">Вес 20 кг<br> Объём 1.2 м2</div>
-              <div class="lk-field__body-categories">Категории
-                <div class="lk-field__body-categories-item" style="background-color: #264CAF; color: #fff">Обувь</div>
-                <div class="lk-field__body-categories-item" style="background-color: #B4DFFB;">Плавание</div>
-              </div><a class="lk-field__body-link" href="">Повторить заказ</a>
-            </div>
-            <div class="lk-field__result">
-              <p class="lk-field__result-total"><strong>Всего товаров: 35</strong></p>
-              <div class="lk-field__body-link" data-popup-parent=".lk-field" data-word="Скрыть список товаров">Показать список товаров</div>
-              <p class="lk-field__result-result">Счет выставлен по колонке <strong>опт 3,</strong> на сумму: <strong>200 000</strong></p>
-            </div>
-            <div class="lk-field-table">
-              <div class="lk-field-table__title">
-                <div class="th">#</div>
-                <div class="th">Наменование</div>
-                <div class="th">Кол-во</div>
-                <div class="th">Цена</div>
-                <div class="th">Итого</div>
-              </div>
-              <div class="lk-field-table__item">
-                <div class="th">1</div>
-                <div class="th">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
-                <div class="th">42</div>
-                <div class="th">1 053 P</div>
-                <div class="th">44 226 P</div>
-              </div>
-              <div class="lk-field-table__item">
-                <div class="th">1</div>
-                <div class="th">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
-                <div class="th">42</div>
-                <div class="th">1 053 P</div>
-                <div class="th">44 226 P</div>
-              </div>
-            </div>
-          </section>
-          <div class="pagination"><a class="pagination__page active" href="/">1</a><a class="pagination__page" href="/">2</a><a class="pagination__page" href="/">3</a><a class="pagination__page" href="/">...</a><a class="pagination__page" href="/">45</a></div>
         </div>
       </div>
     </main>
