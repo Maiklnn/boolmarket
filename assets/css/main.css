@@ -1873,6 +1873,52 @@ h3 {
   border-bottom: 1px solid #EAEAEA;
 }
 
+.table-compare .hide {
+  display: none;
+}
+
+.table-compare.show .hide {
+  display: block;
+}
+
+.table-compare .title {
+  padding: 28px 34px 13px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  /* 112.5% */
+  padding-bottom: 23px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.table-compare .row {
+  padding: 18px 34px 13px;
+  min-height: 75px;
+  border-bottom: 1px solid #EAEAEA;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  /* 157.143% */
+}
+
+.table-compare .row__tr {
+  display: flex;
+  gap: 62px;
+}
+
+.table-compare .row__caption {
+  color: #666;
+  font-weight: 400;
+}
+
+.table-compare .row__td {
+  color: #000;
+  font-weight: 500;
+  min-width: 160px;
+}
+
 .grid {
   display: flex;
   gap: 38px;
@@ -2431,10 +2477,6 @@ h3 {
   width: 58px;
 }
 
-.top-compare {
-  outline: 1px solid red;
-}
-
 .page-compare {
   color: #000;
   font-size: 14px;
@@ -2444,8 +2486,20 @@ h3 {
   padding-bottom: 52px;
 }
 
+.page-compare .top-section {
+  margin-bottom: 50px;
+}
+
+.page-compare .top-section h2 {
+  color: #000;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 26px;
+  /* 81.25% */
+}
+
 .page-compare .top-section-sub {
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   padding-bottom: 15px;
   border-bottom: 1px solid #EAEAEA;
 }
@@ -2473,19 +2527,42 @@ h3 {
 }
 
 .page-compare .top-section-sub-del span .icon {
-  width: 9px;
-  height: 9px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.page-compare .top-section-sub-del span .icon::before {
+  width: 20px;
+  height: 20px;
+  background: url("../img/icon/delete_compere.svg");
   content: "";
 }
 
+.page-compare__list {
+  display: flex;
+  gap: 49px;
+}
+
 .page-compare .item {
-  max-width: 150px;
+  max-width: 175px;
 }
 
 .page-compare .item__top {
   display: flex;
   gap: 14px;
   margin-bottom: 8px;
+}
+
+.page-compare .item__top img {
+  max-width: 100px;
+}
+
+.page-compare .item__top__icon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 11px;
 }
 
 .page-compare .item__top__icon--favorites {
@@ -2508,13 +2585,16 @@ h3 {
   background: url("../img/icon/delete_compere-hover.svg");
 }
 
+.page-compare .item__body {
+  padding-left: 34px;
+}
+
 .page-compare .item__name {
   color: #3C9DDC;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   /* 142.857% */
-  margin-bottom: 8px;
 }
 
 .page-compare .item__art {
@@ -2523,15 +2603,20 @@ h3 {
   font-weight: 400;
   line-height: 26px;
   /* 185.714% */
-  margin-bottom: 8px;
+  margin-bottom: 3px;
 }
 
 .page-compare .item__art span {
   color: #999;
+  padding-left: 2px;
 }
 
 .page-compare .item__price {
-  margin-bottom: 4px;
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 26px;
+  /* 173.333% */
 }
 
 .header--fixed {
