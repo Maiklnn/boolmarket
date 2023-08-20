@@ -5435,4 +5435,79 @@ h3 {
   height: 65px;
   margin-bottom: 80px;
 }
+
+.page-lk--revert .lk-field__body-order {
+  flex: 0 0 330px;
+}
+
+.page-lk--revert .lk-field__body-categories {
+  gap: 20px;
+}
+
+.page-lk--revert .lk-field__body-categories-name {
+  flex: 0 0 auto;
+  padding-right: 14px;
+}
+
+.page-lk--revert .lk-field__body-categories-item {
+  background-color: #28BE37;
+  color: #fff;
+  font-size: 12px;
+  min-width: 115px;
+  text-align: center;
+  position: relative;
+}
+
+.page-lk--revert .lk-field__body-categories-item.line::before {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: 20px;
+  height: 2px;
+  background-color: #CDCDCD;
+  content: "";
+}
+
+.page-lk--revert .lk-field__body-categories-item.line.close::before {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: 20px;
+  height: 2px;
+  background-color: #B4DFFB;
+  content: "";
+}
+
+.page-lk--revert .lk-field__body-categories-item.close {
+  background-color: #B4DFFB;
+  color: #000;
+}
+
+.page-lk--revert .lk-field-table__title {
+  grid-template-columns: 22px 1fr 81px 152px 92px 60px;
+}
+
+.page-lk--revert .lk-field-table__item {
+  grid-template-columns: 22px 1fr 81px 152px 92px 60px;
+  padding: 12px 0;
+}
+
+.page-lk--revert .th-caption {
+  display: flex;
+  gap: 7px;
+  font-size: 12px;
+}
+
+.page-lk--revert .th-caption p {
+  min-width: 95px;
+}
+
+.page-lk--revert .th-caption__descr {
+  padding: 3px 11px;
+  border-radius: 5px;
+  background: #878787;
+  max-width: 288px;
+  color: #fff;
+  line-height: 20px;
+}
 /*# sourceMappingURL=main.css.map */
