@@ -273,32 +273,43 @@
         </div>
       </section>
       <section class="form-landing"><a name="order-reg"></a>
-        <h2>Заявка на регистрацию</h2>
-        <form class="form-landing-form">
-          <div class="placeholder-container">
-            <input type="text" name="#" placeholder="Название компании" required>
+        <div class="tab container">
+          <div class="tab__nav">
+            <div class="tab__nav-inner"><a class="tab__link tab__link--active" data-tab_link="1" href="#">Оптовый</a><a class="tab__link  " data-tab_link="2" href="#">Розничный</a></div>
           </div>
-          <div class="placeholder-container">
-            <input type="text" name="#" placeholder="E-mail" required>
+          <div class="tab__content-item" data-tab_content="1" data-da="main-tab__nav, 1, 991">
+            <h2>Заявка на регистрацию</h2>
+            <form class="form-landing-form">
+              <div class="placeholder-container">
+                <input type="text" name="#" placeholder="Название компании" required>
+              </div>
+              <div class="placeholder-container">
+                <input type="text" name="#" placeholder="E-mail" required>
+              </div>
+              <div class="placeholder-container">
+                <input type="text" name="#" placeholder="ИНН" required>
+              </div>
+              <div class="placeholder-container">
+                <input type="text" name="#" data-mask="tel" placeholder="Телефон" required>
+              </div>
+              <div class="placeholder-container">
+                <input type="text" name="#" placeholder="Город" required>
+              </div>
+              <div class="placeholder-container">
+                <input type="text" name="#" placeholder="Контактное лицо" required>
+              </div>
+              <div class="placeholder-container texarea">
+                <textarea type="text" name="#" placeholder="Дополнительная информация"></textarea>
+              </div>
+              <div class="captcha"><img src="assets/img/captcha.jpg" alt="#"></div>
+              <button class="btn" data-form="true">Отправить</button>
+            </form>
           </div>
-          <div class="placeholder-container">
-            <input type="text" name="#" placeholder="ИНН" required>
+          <div class="tab__content-item sportsberry tab__content-item--active" data-tab_content="2" data-da="main-tab__nav, 2, 991">
+            <h2>Наш розничный интернет магазин</h2>
+            <div class="sportsberry__name"><span>SPORTS</span>BERRY.RU</div><a class="btn" href="">Перейти</a>
           </div>
-          <div class="placeholder-container">
-            <input type="text" name="#" data-mask="tel" placeholder="Телефон" required>
-          </div>
-          <div class="placeholder-container">
-            <input type="text" name="#" placeholder="Город" required>
-          </div>
-          <div class="placeholder-container">
-            <input type="text" name="#" placeholder="Контактное лицо" required>
-          </div>
-          <div class="placeholder-container texarea">
-            <textarea type="text" name="#" placeholder="Дополнительная информация"></textarea>
-          </div>
-          <div class="captcha"><img src="assets/img/captcha.jpg" alt="#"></div>
-          <button class="btn" data-form="true">Отправить</button>
-        </form>
+        </div>
       </section>
       <div class="modal-popup" data-close="1" data-popup="lend-popup">
         <form class="lend-popup">
