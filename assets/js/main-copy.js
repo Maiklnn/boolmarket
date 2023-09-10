@@ -319,26 +319,13 @@ var Webnn = /*#__PURE__*/function () {
   }, {
     key: "sliders",
     value: function sliders() {
-      var nameSlider = 'main-slider';
-      new Swiper(document.querySelector(".".concat(nameSlider, "__box")), {
-        spaceBetween: 30,
-        allowTouchMove: false,
-        // speed: 500,
-        // autoplay: {
-        // 	delay: 7000
-        // },
-        navigation: {
-          nextEl: ".".concat(nameSlider, "-navigation__next"),
-          prevEl: ".".concat(nameSlider, "-navigation__prev")
-        },
-        breakpoints: {}
-      });
       var nameSlider = 'hits-slider';
       new Swiper(document.querySelector(".".concat(nameSlider, "__box")), {
         spaceBetween: 50,
-        allowTouchMove: false,
         // растояние
         slidesPerView: 5,
+        // кол-во слайдов
+        slideToClickedSlide: true,
         loop: true,
         // centeredSlides: true,
         // ативный слайд по центру
@@ -352,9 +339,10 @@ var Webnn = /*#__PURE__*/function () {
       var nameSlider = 'water-season-slider';
       new Swiper(document.querySelector(".".concat(nameSlider, "__box")), {
         spaceBetween: 30,
-        allowTouchMove: false,
         // растояние
         slidesPerView: 4,
+        // кол-во слайдов
+        slideToClickedSlide: true,
         loop: true,
         // ативный слайд по центру
         speed: 500,
@@ -367,9 +355,10 @@ var Webnn = /*#__PURE__*/function () {
       var nameSlider = 'recomennded-slider';
       new Swiper(document.querySelector(".".concat(nameSlider, "__box")), {
         spaceBetween: 50,
-        allowTouchMove: false,
         // растояние
         slidesPerView: 5,
+        slideToClickedSlide: false,
+        // кол-во слайдов
         loop: true,
         speed: 500,
         navigation: {
@@ -383,11 +372,28 @@ var Webnn = /*#__PURE__*/function () {
         spaceBetween: 35,
         // растояние
         slidesPerView: 7,
-        allowTouchMove: false,
+        // кол-во слайдов
+        slideToClickedSlide: true,
         loop: true,
         // centeredSlides: true,
         // ативный слайд по центру
         speed: 500,
+        navigation: {
+          nextEl: ".".concat(nameSlider, "-navigation__next"),
+          prevEl: ".".concat(nameSlider, "-navigation__prev")
+        },
+        breakpoints: {}
+      });
+      var nameSlider = 'main-slider';
+      new Swiper(document.querySelector(".".concat(nameSlider, "__box")), {
+        spaceBetween: 30,
+        slideToClickedSlide: true,
+        loop: true,
+        // slideToClickedSlide: false,
+        // speed: 500,
+        // autoplay: {
+        // 	delay: 7000
+        // },
         navigation: {
           nextEl: ".".concat(nameSlider, "-navigation__next"),
           prevEl: ".".concat(nameSlider, "-navigation__prev")
@@ -408,7 +414,6 @@ var Webnn = /*#__PURE__*/function () {
           speed: 500,
           slideToClickedSlide: true,
           loop: true,
-          allowTouchMove: false,
           navigation: {
             nextEl: item.querySelector('.slider-navigation__next'),
             prevEl: item.querySelector(".slider-navigation__prev")
@@ -5148,4 +5153,4 @@ if (gal) {
     }
   }).mount('#gallery-slider');
 }
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=main-copy.js.map
