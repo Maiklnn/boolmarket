@@ -363,147 +363,149 @@
     </div>
     <!-- Попап загрузок-->
     <!-- div(class=`modal-popup` data-close="1" data-popup="popup-load" )-->
-    <main class="page-lk page-lk--revert container">
-      <div class="top">
-        <h1>Возвраты</h1>
-      </div>
-      <div class="body">
-        <div class="body__aside">
-          <nav class="aside-menu__nav">
-            <ul>
-                            <li><a href="/">
-                                <div>Профиль</div></a></li>
-                            <li><a class="active" href="my-сompany.html">
-                                <div>Мои компании</div></a></li>
-                            <li><a class="undefined" href="my-order.html">
-                                <div>Мои заказы</div></a></li>
-                            <li><a class="undefined" href="favorite.html">
-                                <div>Избранное</div></a></li>
-                            <li><a class="undefined" href="list-compare.html">
-                                <div>Списки сравнения</div></a></li>
-                            <li><a class="undefined" href="good-revert.html">
-                                <div>Возвраты</div></a></li>
-                            <li><a class="undefined" href="undefined">
-                                <div>Настройки</div></a></li>
-                            <li><a class="undefined" href="undefined">
-                                <div>Выйти</div></a></li>
-            </ul>
-          </nav>
+    <main>
+      <div class="page-lk page-lk--revert container">
+        <div class="top">
+          <h1>Возвраты</h1>
         </div>
-        <div class="body__main">
-          <form class="form-my-order">
-            <div class="form-field"><span class="form-field__caption">По номеру</span>
-              <div class="placeholder-container">
-                <input type="text" name="#" placeholder="Введите номер" required>
-              </div>
-            </div>
-            <div class="form-field form"><span class="form-field__caption">Дата обращения</span>
-              <div class="placeholder-container placeholder-container--date">
-                <input type="text" name="#" data-mask="date" placeholder="__.__.__" required>
-                <input type="text" name="#" data-mask="date" placeholder="__.__.__" required>
-              </div>
-            </div>
-            <div class="form-field"><span class="form-field__caption">Тип претензии</span>
-              <div class="select">
-                <div class="select__header">Все</div>
-                <div class="select__body">
-                                    <label class="select__body-item "><span>Все</span>
-                                      <input type="radio" id="one" name="select">
-                                    </label>
-                                    <label class="select__body-item "><span>Брак</span>
-                                      <input type="radio" id="one" name="select">
-                                    </label>
+        <div class="body">
+          <div class="body__aside">
+            <nav class="aside-menu__nav">
+              <ul>
+                                <li><a href="/">
+                                    <div>Профиль</div></a></li>
+                                <li><a class="active" href="my-сompany.html">
+                                    <div>Мои компании</div></a></li>
+                                <li><a class="undefined" href="my-order.html">
+                                    <div>Мои заказы</div></a></li>
+                                <li><a class="undefined" href="favorite.html">
+                                    <div>Избранное</div></a></li>
+                                <li><a class="undefined" href="list-compare.html">
+                                    <div>Списки сравнения</div></a></li>
+                                <li><a class="undefined" href="good-revert.html">
+                                    <div>Возвраты</div></a></li>
+                                <li><a class="undefined" href="undefined">
+                                    <div>Настройки</div></a></li>
+                                <li><a class="undefined" href="undefined">
+                                    <div>Выйти</div></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="body__main">
+            <form class="form-my-order">
+              <div class="form-field"><span class="form-field__caption">По номеру</span>
+                <div class="placeholder-container">
+                  <input type="text" name="#" placeholder="Введите номер" required>
                 </div>
               </div>
-            </div>
-            <div class="form-my-order__btns">
-              <button class="btn">Применить</button>
-              <button class="btn">Сбросить</button>
-            </div>
-          </form>
-          <section class="lk-field">
-            <div class="lk-field__body">
-              <div class="lk-field__body-order">Претензии по браку <strong>#256198</strong><br>от 21.06.23г</div>
-              <div class="lk-field__body-categories">Статус
-                <div class="lk-field__body-categories-item" style="background-color: #999;">На расмтрении</div>
+              <div class="form-field form"><span class="form-field__caption">Дата обращения</span>
+                <div class="placeholder-container placeholder-container--date">
+                  <input type="text" name="#" data-mask="date" placeholder="__.__.__" required>
+                  <input type="text" name="#" data-mask="date" placeholder="__.__.__" required>
+                </div>
               </div>
-            </div>
-            <div class="lk-field__result">
-              <p class="lk-field__result-total"><strong>Всего товаров: 35</strong></p>
-              <div class="lk-field__body-link" data-popup-parent=".lk-field" data-word="Скрыть">Подробнее</div>
-              <p class="lk-field__result-result">Сумма претензий: <strong>200 000 &#x20bd;</strong></p>
-            </div>
-            <div class="lk-field-table">
-              <div class="lk-field-table__title">
-                <div class="th">#</div>
-                <div class="th">Наменование</div>
-                <div class="th">№ УПД</div>
-                <div class="th">Кол-во</div>
-                <div class="th">Цена</div>
-                <div class="th">Итого</div>
-              </div>
-              <div class="lk-field-table__item">
-                <div class="th">1</div>
-                <div class="th">
-                  <p>Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</p>
-                  <div class="th-caption">
-                    <p>Характер брака:</p>
-                    <div class="th-caption__descr">Спускает не держит давление нарушена сферичность, разошлись швы на панели</div>
+              <div class="form-field"><span class="form-field__caption">Тип претензии</span>
+                <div class="select">
+                  <div class="select__header">Все</div>
+                  <div class="select__body">
+                                        <label class="select__body-item "><span>Все</span>
+                                          <input type="radio" id="one" name="select">
+                                        </label>
+                                        <label class="select__body-item "><span>Брак</span>
+                                          <input type="radio" id="one" name="select">
+                                        </label>
                   </div>
                 </div>
-                <div class="th">78978</div>
-                <div class="th">42</div>
-                <div class="th">1 053 P</div>
-                <div class="th">44 226 P</div>
               </div>
-            </div>
-          </section>
-          <section class="lk-field">
-            <div class="lk-field__body">
-              <div class="lk-field__body-order">Претензии по браку <strong>#256198</strong><br>от 21.06.23г</div>
-              <div class="lk-field__body-categories">Статус
-                <div class="lk-field__body-categories-item" style="background-color: #28BE37;">В работе</div>
+              <div class="form-my-order__btns">
+                <button class="btn">Применить</button>
+                <button class="btn">Сбросить</button>
               </div>
-            </div>
-            <div class="lk-field__result">
-              <p class="lk-field__result-total"><strong>Всего товаров: 35</strong></p>
-              <div class="lk-field__body-link" data-popup-parent=".lk-field" data-word="Скрыть">Подробнее</div>
-              <p class="lk-field__result-result">Счет выставлен по колонке <strong>опт 3,</strong> на сумму: <strong>200 000</strong></p>
-            </div>
-            <div class="lk-field-table">
-              <div class="lk-field-table__title">
-                <div class="th">#</div>
-                <div class="th">Наменование</div>
-                <div class="th">№ УПД</div>
-                <div class="th">Кол-во</div>
-                <div class="th">Цена</div>
-                <div class="th">Итого</div>
-              </div>
-              <div class="lk-field-table__item">
-                <div class="th">1</div>
-                <div class="th">
-                  <p>Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</p>
-                  <div class="th-caption">
-                    <p>Характер брака:</p>
-                    <div class="th-caption__descr">Спускает не держит давление нарушена сферичность, разошлись швы на панели</div>
-                  </div>
+            </form>
+            <section class="lk-field">
+              <div class="lk-field__body">
+                <div class="lk-field__body-order">Претензии по браку <strong>#256198</strong><br>от 21.06.23г</div>
+                <div class="lk-field__body-categories">Статус
+                  <div class="lk-field__body-categories-item" style="background-color: #999;">На расмтрении</div>
                 </div>
-                <div class="th">78978</div>
-                <div class="th">42</div>
-                <div class="th">1 053 P</div>
-                <div class="th">44 226 P</div>
               </div>
-              <div class="lk-field-table__item">
-                <div class="th">1</div>
-                <div class="th">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
-                <div class="th">78978</div>
-                <div class="th">42</div>
-                <div class="th">1 053 P</div>
-                <div class="th">44 226 P</div>
+              <div class="lk-field__result">
+                <p class="lk-field__result-total"><strong>Всего товаров: 35</strong></p>
+                <div class="lk-field__body-link" data-popup-parent=".lk-field" data-word="Скрыть">Подробнее</div>
+                <p class="lk-field__result-result">Сумма претензий: <strong>200 000 &#x20bd;</strong></p>
               </div>
-            </div>
-          </section>
-          <div class="pagination"><a class="pagination__page active" href="/">1</a><a class="pagination__page" href="/">2</a><a class="pagination__page" href="/">3</a><a class="pagination__page" href="/">...</a><a class="pagination__page" href="/">45</a></div>
+              <div class="lk-field-table">
+                <div class="lk-field-table__title">
+                  <div class="th">#</div>
+                  <div class="th">Наменование</div>
+                  <div class="th">№ УПД</div>
+                  <div class="th">Кол-во</div>
+                  <div class="th">Цена</div>
+                  <div class="th">Итого</div>
+                </div>
+                <div class="lk-field-table__item">
+                  <div class="th">1</div>
+                  <div class="th">
+                    <p>Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</p>
+                    <div class="th-caption">
+                      <p>Характер брака:</p>
+                      <div class="th-caption__descr">Спускает не держит давление нарушена сферичность, разошлись швы на панели</div>
+                    </div>
+                  </div>
+                  <div class="th">78978</div>
+                  <div class="th">42</div>
+                  <div class="th">1 053 P</div>
+                  <div class="th">44 226 P</div>
+                </div>
+              </div>
+            </section>
+            <section class="lk-field">
+              <div class="lk-field__body">
+                <div class="lk-field__body-order">Претензии по браку <strong>#256198</strong><br>от 21.06.23г</div>
+                <div class="lk-field__body-categories">Статус
+                  <div class="lk-field__body-categories-item" style="background-color: #28BE37;">В работе</div>
+                </div>
+              </div>
+              <div class="lk-field__result">
+                <p class="lk-field__result-total"><strong>Всего товаров: 35</strong></p>
+                <div class="lk-field__body-link" data-popup-parent=".lk-field" data-word="Скрыть">Подробнее</div>
+                <p class="lk-field__result-result">Счет выставлен по колонке <strong>опт 3,</strong> на сумму: <strong>200 000</strong></p>
+              </div>
+              <div class="lk-field-table">
+                <div class="lk-field-table__title">
+                  <div class="th">#</div>
+                  <div class="th">Наменование</div>
+                  <div class="th">№ УПД</div>
+                  <div class="th">Кол-во</div>
+                  <div class="th">Цена</div>
+                  <div class="th">Итого</div>
+                </div>
+                <div class="lk-field-table__item">
+                  <div class="th">1</div>
+                  <div class="th">
+                    <p>Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</p>
+                    <div class="th-caption">
+                      <p>Характер брака:</p>
+                      <div class="th-caption__descr">Спускает не держит давление нарушена сферичность, разошлись швы на панели</div>
+                    </div>
+                  </div>
+                  <div class="th">78978</div>
+                  <div class="th">42</div>
+                  <div class="th">1 053 P</div>
+                  <div class="th">44 226 P</div>
+                </div>
+                <div class="lk-field-table__item">
+                  <div class="th">1</div>
+                  <div class="th">Мяч футб. VISION Spark, F321045, р.5, FIFA Basiс, 24 пан, ПУ.слой, гибрид. сшив., мультиколор</div>
+                  <div class="th">78978</div>
+                  <div class="th">42</div>
+                  <div class="th">1 053 P</div>
+                  <div class="th">44 226 P</div>
+                </div>
+              </div>
+            </section>
+            <div class="pagination"><a class="pagination__page active" href="/">1</a><a class="pagination__page" href="/">2</a><a class="pagination__page" href="/">3</a><a class="pagination__page" href="/">...</a><a class="pagination__page" href="/">45</a></div>
+          </div>
         </div>
       </div>
     </main>
