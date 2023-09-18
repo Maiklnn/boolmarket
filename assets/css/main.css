@@ -3700,6 +3700,18 @@ h3 {
   height: auto;
 }
 
+.page-catalog-list .body__filter-btns {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  cursor: initial;
+}
+
+.page-catalog-list .body__filter-btns .btn {
+  width: 50%;
+}
+
 .page-catalog-list .body__filter-link {
   color: #158AE0;
   font-size: 14px;
