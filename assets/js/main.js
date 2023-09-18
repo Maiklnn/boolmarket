@@ -117,6 +117,10 @@ var Webnn = /*#__PURE__*/function () {
         }
         var select_item = this.target.closest('.select__body-item');
         if (select_item) {
+          console.log(this.target.dataset.href);
+          if (this.target.dataset.href) {
+            document.location.href = this.target.dataset.href;
+          }
           if (this.select_click.classList.contains('select--order')) {
             select_item.classList.toggle('selected');
             return;
