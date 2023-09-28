@@ -5152,4 +5152,15 @@ if (gal) {
     }
   }).mount('#gallery-slider');
 }
+document.addEventListener('click', function (e) {
+  var target = e.target;
+  var clickedElement = target.dataset.show;
+  if (clickedElement === 'all:parent') {
+    e.preventDefault();
+    var nav = target.closest('nav');
+    var active = nav.querySelector('.active');
+    active.classList.remove('active');
+    e.target.classList.add('active');
+  }
+});
 //# sourceMappingURL=main.js.map

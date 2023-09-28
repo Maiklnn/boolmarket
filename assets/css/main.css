@@ -2481,6 +2481,10 @@ h3 {
   width: 58px;
 }
 
+body {
+  width: 100%;
+}
+
 .page-compare {
   color: #000;
   font-size: 14px;
@@ -3313,6 +3317,8 @@ h3 {
 }
 
 .page-home .water-season .water-season-navigation {
+  outline: 1px solid red;
+  pointer-events: none;
   position: absolute;
   top: 44%;
   left: 0;
@@ -3334,6 +3340,7 @@ h3 {
   justify-content: center;
   border-radius: 100%;
   position: relative;
+  pointer-events: initial;
 }
 
 .page-home .water-season .water-season-navigation__prev::before,
